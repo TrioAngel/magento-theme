@@ -1,0 +1,16 @@
+<?php
+$all = $this->getAll();
+
+?>
+
+<h1>Change Module Name List</h1>
+
+<ul class="test">
+    <?php foreach ($all as $item) : ?>
+        <li><?= $item->getData('name') ?></li>
+    <?php endforeach; ?>
+</ul>
+
+
+<p class="config-value">Get enable value and display text value: <?= $this->getConfigsValues() ?></p>
+

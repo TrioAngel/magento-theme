@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="footer-container">
+            <container name="theme_footer" label="Footer Columns" htmlTag="div" htmlClass="footer columns">
+                <block class="Magento\Framework\View\Element\Template" name="text_part"
+                       template="Change_Module::footer/footer.phtml">
+                    <block class="Magento\Cms\Block\Block" name="footer.top.block">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">footer_top_block</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="footer.bottom.links">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">footer_bottom_left_block</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="footer.bottom.icons">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">footer_bottom_right_block</argument>
+                        </arguments>
+                    </block>
+                </block>
+            </container>
+        </referenceContainer>
+
+        <move element="form.subscribe" destination="text_part"/>
+
+        <referenceBlock name="footer_links" remove="true"/>
+    </body>
+</page>

@@ -1,0 +1,108 @@
+@color: #1a1a1a;
+@main-color: #f38382;
+
+.footer-content {
+  background-color: #ecd7c2;
+  padding: 20px 0;
+  .footer-text {
+    padding: 20px 0;
+    width: 90%;
+    margin: 0 auto;
+    h2 {
+      font-weight: 600;
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+      margin-bottom: 10px;
+    }
+    p {
+      font-weight: 600;
+    }
+  }
+  .footer-signup {
+    padding: 30px 0;
+    .agree {
+      display: table-footer-group;
+      input {
+        height: 15px !important;
+        margin-top: 10px;
+      }
+      a {
+        color: #1a1a1a;
+        text-decoration: underline;
+      }
+    }
+    .block.newsletter {
+      width: 90%;
+      float: none;
+      margin-bottom: 10px;
+      input {
+        border: 3px solid @main-color;
+        border-radius: 0;
+        box-shadow: none;
+        height: 44px;
+        outline: none;
+        padding: 8px 5px;
+      }
+      .control::before {
+        display: none;
+      }
+      .actions {
+        button {
+          background-color: @main-color;
+          border: 1px solid @main-color;
+          border-radius: 0;
+          padding: 13px 20px;
+        }
+      }
+    }
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-gap: 10px;
+  .col {
+    h3 {
+      color: @main-color;
+      padding: 10px 0;
+    }
+    .row-inside {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-gap: 10px;
+      p {
+        a {
+          text-decoration: none;
+          color: @color;
+          font-size: 20px;
+          font-weight: 500;
+        }
+        a:hover {
+          color: @main-color;
+        }
+      }
+    }
+    .icons-group {
+      a {
+        color: @color;
+        font-size: 40px;
+        margin-right: 20px;
+        text-decoration: none;
+        span {
+          display: none;
+        }
+      }
+      a:hover {
+        color: @main-color;
+      }
+    }
+    p {
+      img {
+        width: 50px;
+        height: 40px;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
