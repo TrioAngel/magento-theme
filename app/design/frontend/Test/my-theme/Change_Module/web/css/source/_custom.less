@@ -1,108 +1,188 @@
 @color: #1a1a1a;
-@main-color: #f38382;
+@main-color: #f07f77;
+
+
+.nav-open {
+    .level0 {
+        width: 100%;
+        text-align: left;
+        &.last {
+            text-align: left;
+        }
+    }
+}
+
+
+.nav-sections {
+    background-color: #ffffff;
+    nav {
+        background-color: #ffffff;
+        ul {
+            li {
+                width: 16%;
+                text-align: center;
+                margin: 0 !important;
+                &:first-child {
+                    text-align: left;
+                }
+                &:last-child {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+
+.page-header {
+    .header.content {
+        .block-search {
+            width: 35%;
+            padding-left: 0;
+            right: 25%;
+            input {
+                border: 1px solid @color;
+            }
+            .action.search:before {
+                color: @color;
+            }
+        }
+        .account-icon {
+            float: right;
+            a {
+                color: #757575;
+                &:hover {
+                    color: #1a1a1a;
+                }
+                i {
+                    font-size: 20px;
+                    padding-top: 5px;
+                }
+            }
+        }
+
+    }
+    .panel.wrapper {
+        background-color: @main-color;
+        .panel.header {
+            h5 {
+                margin: 0;
+                i {
+                    margin-right: 12px;
+                    font-size: 16px;
+                }
+                span {
+                    float: right;
+                }
+            }
+        }
+    }
+}
+
+
+
 
 .footer-content {
-  background-color: #ecd7c2;
-  padding: 20px 0;
-  .footer-text {
+    background-color: #ecd7c2;
     padding: 20px 0;
-    width: 90%;
-    margin: 0 auto;
-    h2 {
-      font-weight: 600;
-      font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
-      margin-bottom: 10px;
-    }
-    p {
-      font-weight: 600;
-    }
-  }
-  .footer-signup {
-    padding: 30px 0;
-    .agree {
-      display: table-footer-group;
-      input {
-        height: 15px !important;
-        margin-top: 10px;
-      }
-      a {
-        color: #1a1a1a;
-        text-decoration: underline;
-      }
-    }
-    .block.newsletter {
-      width: 90%;
-      float: none;
-      margin-bottom: 10px;
-      input {
-        border: 3px solid @main-color;
-        border-radius: 0;
-        box-shadow: none;
-        height: 44px;
-        outline: none;
-        padding: 8px 5px;
-      }
-      .control::before {
-        display: none;
-      }
-      .actions {
-        button {
-          background-color: @main-color;
-          border: 1px solid @main-color;
-          border-radius: 0;
-          padding: 13px 20px;
+    .footer-text {
+        padding: 20px 0;
+        width: 90%;
+        margin: 0 auto;
+        h2 {
+            font-weight: 600;
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+            margin-bottom: 10px;
         }
-      }
+        p {
+            font-weight: 600;
+        }
     }
-  }
+    .footer-signup {
+        padding: 30px 0;
+        .agree {
+            display: table-footer-group;
+            input {
+                height: 15px !important;
+                margin-top: 10px;
+            }
+            a {
+                color: #1a1a1a;
+                text-decoration: underline;
+            }
+        }
+        .block.newsletter {
+            width: 90%;
+            float: none;
+            margin-bottom: 10px;
+            input {
+                border: 3px solid @main-color;
+                border-radius: 0;
+                box-shadow: none;
+                height: 44px;
+                outline: none;
+                padding: 8px 5px;
+            }
+            .control::before {
+                display: none;
+            }
+            .actions {
+                button {
+                    background-color: @main-color;
+                    border: 1px solid @main-color;
+                    border-radius: 0;
+                    padding: 13px 20px;
+                }
+            }
+        }
+    }
 }
 
 .row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  grid-gap: 10px;
-  .col {
-    h3 {
-      color: @main-color;
-      padding: 10px 0;
-    }
-    .row-inside {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      grid-gap: 10px;
-      p {
-        a {
-          text-decoration: none;
-          color: @color;
-          font-size: 20px;
-          font-weight: 500;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-gap: 10px;
+    .col {
+        h3 {
+            color: @main-color;
+            padding: 10px 0;
         }
-        a:hover {
-          color: @main-color;
+        .row-inside {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-gap: 10px;
+            p {
+                a {
+                    text-decoration: none;
+                    color: @color;
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+                a:hover {
+                    color: @main-color;
+                }
+            }
         }
-      }
-    }
-    .icons-group {
-      a {
-        color: @color;
-        font-size: 40px;
-        margin-right: 20px;
-        text-decoration: none;
-        span {
-          display: none;
+        .icons-group {
+            a {
+                color: @color;
+                font-size: 40px;
+                margin-right: 20px;
+                text-decoration: none;
+                span {
+                    display: none;
+                }
+            }
+            a:hover {
+                color: @main-color;
+            }
         }
-      }
-      a:hover {
-        color: @main-color;
-      }
+        p {
+            img {
+                width: 50px;
+                height: 40px;
+                margin-right: 20px;
+            }
+        }
     }
-    p {
-      img {
-        width: 50px;
-        height: 40px;
-        margin-right: 20px;
-      }
-    }
-  }
 }
 

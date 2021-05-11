@@ -1,0 +1,24 @@
+<div class="account-icon">
+    <!-- ko if: customer().firstname  -->
+    <?php $accUrl = $this->getUrl('customer/account/') ?>
+    <!-- /ko -->
+    <!-- ko ifnot: customer().firstname  -->
+    <?php $accUrl = $this->getUrl('customer/account/login/') ?>
+    <!-- /ko -->
+    <a class="action" href="<?= $accUrl ?>">
+        <i class="far fa-user"></i>
+    </a>
+    <script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "customer": {
+                        "component": "Magento_Customer/js/view/customer"
+                    }
+                }
+            }
+        }
+    }
+    </script>
+</div>

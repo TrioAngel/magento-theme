@@ -2,6 +2,22 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+
+        <referenceContainer name="header.panel.wrapper">
+            <container name="header.panel" label="Page Header Panel" htmlTag="div" htmlClass="panel header">
+                <block class="Magento\Framework\View\Element\Template" name="header_top_block" template="Change_Module::header/top.phtml">
+                    <block class="Magento\Cms\Block\Block" name="header_top_part">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">header_top</argument>
+                        </arguments>
+                    </block>
+                </block>
+            </container>
+        </referenceContainer>
+        <referenceContainer name="header-wrapper">
+            <block class="Magento\Framework\View\Element\Template" name="account_icon" template="Change_Module::header/account.phtml" after="minicart"></block>
+        </referenceContainer>
+
         <referenceContainer name="footer-container">
             <container name="theme_footer" label="Footer Columns" htmlTag="div" htmlClass="footer columns">
                 <block class="Magento\Framework\View\Element\Template" name="text_part"
@@ -26,6 +42,10 @@
         </referenceContainer>
 
         <move element="form.subscribe" destination="text_part"/>
+
+        <referenceBlock name="skip_to_content" remove="true"/>
+        <referenceBlock name="store_language" remove="true"/>
+        <referenceBlock name="top.links" remove="true"/>
 
         <referenceBlock name="footer_links" remove="true"/>
     </body>
