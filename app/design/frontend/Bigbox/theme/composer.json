@@ -1,0 +1,21 @@
+{
+  "name": "bigbox/theme",
+  "description": "BigBox theme",
+  "config": {
+    "sort-packages": true
+  },
+  "require": {
+    "magento/framework": "*",
+    "test/my-theme": "*"
+  },
+  "type": "magento2-theme",
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ]
+  }
+}

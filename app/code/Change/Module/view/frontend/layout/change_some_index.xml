@@ -11,7 +11,5 @@
         <referenceContainer name="content">
             <block class="Change\Module\Block\Index" name="chnage_some" template="Change_Module::index.phtml"/>
         </referenceContainer>
-
-        <referenceContainer name="footer" remove="true"/>
     </body>
 </page>

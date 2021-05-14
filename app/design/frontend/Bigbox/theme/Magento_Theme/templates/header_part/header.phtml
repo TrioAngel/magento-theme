@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="column">
+        <div class="col-column">
+            <?= $this->getChildHtml("header_1") ?>
+        </div>
+        <div class="col-column last-one">
+            <?= $this->getChildHtml("header_2") ?>
+        </div>
+    </div>
+    <div class="column">
+        <?= $this->getChildHtml('logo') ?>
+    </div>
+    <div class="column text-right">
+        <div class="col-column">
+            <?= $this->getChildHtml("header_3") ?>
+            <p><a href="#">Գրանցում</a> / <a href="#">Մուտք</a></p>
+        </div>
+        <div class="col-column last-one">
+            <?= $this->getChildHtml("minicart")?>
+            <p><?= __('Զամբյուղ') ?></p>
+        </div>
+    </div>
+</div>

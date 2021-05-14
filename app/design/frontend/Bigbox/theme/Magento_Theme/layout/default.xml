@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks"/>
+    <body>
+        <referenceContainer name="header-wrapper">
+            <block class="Magento\Framework\View\Element\Template" name="header.part" template="Magento_Theme::header_part/header.phtml">
+                <block class="Magento\Cms\Block\Block" name="header_1">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">header_column_1</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="header_2">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">header_column_2</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="header_3">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">header_column_3</argument>
+                    </arguments>
+                </block>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="page.top">
+            <block class="Magento\Framework\View\Element\Template" name="page_top_part" template="Magento_Theme::page_part/top.phtml">
+
+            </block>
+        </referenceContainer>
+        <referenceContainer name="footer-container">
+            <container name="bigbox_footer" as="bigbox_footer" label="Page Footer" htmlTag="div"
+                       htmlClass="footer content">
+                <block class="Magento\Framework\View\Element\Template" name="footer.part"
+                       template="Magento_Theme::footer_part/footer.phtml">
+                    <block class="Magento\Cms\Block\Block" name="column_1">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">footer_column_1</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="column_2">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">footer_column_2</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="column_3">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">footer_column_3</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="column_4_top">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">footer_column_4_top</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="column_4_bottom">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">footer_column_4_bottom</argument>
+                        </arguments>
+                    </block>
+                </block>
+            </container>
+        </referenceContainer>
+
+        <move element="form.subscribe" destination="footer.part"/>
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="copyright" remove="true"/>
+
+        <referenceBlock name="header.links" remove="true" />
+
+
+        <move element="logo" destination="header.part"/>
+        <move element="top.search" destination="page_top_part" />
+
+        <move element="navigation.sections" destination="page_top_part" />
+        <move element="minicart" destination="header.part" />
+        <move element="breadcrumbs" destination="page_top_part"/>
+
+
+    </body>
+</page>
