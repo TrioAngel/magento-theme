@@ -30,7 +30,7 @@
         </referenceContainer>
         <referenceContainer name="page.top">
             <block class="Magento\Framework\View\Element\Template" name="page_top_part" template="Magento_Theme::page_part/top.phtml">
-
+                <block class="Magento\Framework\View\Element\Template" name="search_icon" template="Magento_Theme::page_part/search.phtml" />
             </block>
         </referenceContainer>
         <referenceContainer name="footer-container">
@@ -66,6 +66,7 @@
                 </block>
             </container>
         </referenceContainer>
+
 
         <move element="form.subscribe" destination="footer.part"/>
         <referenceBlock name="footer_links" remove="true"/>

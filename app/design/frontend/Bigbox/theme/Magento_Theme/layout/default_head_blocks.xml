@@ -9,5 +9,6 @@
     <head>
         <css src="https://use.fontawesome.com/releases/v5.2.0/css/all.css" src_type="url"/>
         <css src="Magento_Theme::css/fonticon.css"/>
+        <script src="Magento_Theme::js/search.js" />
     </head>
 </page>

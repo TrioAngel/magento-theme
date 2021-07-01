@@ -1,0 +1,51 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+  .add-to-cart {
+    .btn {
+      background-color: red;
+    }
+  }
+}
+
+
+@media(max-width: 998px) {
+
+}
+
+@media(min-width: 998px) {
+
+}
+
+@media(max-width: 111px) and (min-width: 45px) {
+
+}
+
+//
+//  Max width 768
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+}
+
+//
+//  Max width 768
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+
+//
+//  Max width 480
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+
+}
+
+

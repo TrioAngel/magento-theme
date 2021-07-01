@@ -28,8 +28,6 @@ class PreProcessor extends \Magento\Translation\Model\Json\PreProcessor
                 $this->translate->setLocale($context->getLocale());
             }
 
-            // $area = $this->areaList->getArea($areaCode);
-            // $area->load(\Magento\Framework\App\Area::PART_TRANSLATE);
             $area = $this->areaList->getArea($areaCode);
             $area->load(\Magento\Framework\App\Area::PART_DESIGN);
             $area->load(\Magento\Framework\App\Area::PART_TRANSLATE);

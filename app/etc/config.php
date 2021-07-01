@@ -2,6 +2,7 @@
 return array (
   'modules' => 
   array (
+    'Cache_Contents' => 1,
     'Change_Module' => 1,
     'Magento_Store' => 1,
     'Magento_AdvancedPricingImportExport' => 1,

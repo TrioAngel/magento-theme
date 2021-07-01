@@ -1,0 +1,42 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+  //
+  //  Shopping cart
+  //  ---------------------------------------------
+  .checkout-cart-index {
+    .page-main {
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      .page-title-wrapper {
+        text-align: center;
+        margin: 50px 0;
+        &::after {
+          content: '';
+          width: 28px;
+          height: 3px;
+          background-color: @color-red;
+          display: inline-block;
+          position: relative;
+          top: 20px;
+          right: 65px;
+        }
+        h1 {
+          font-size: 20px;
+          line-height: 23px;
+        }
+      }
+      .columns {
+        .column.main {
+          .cart-container {
+            .form.form-cart {
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

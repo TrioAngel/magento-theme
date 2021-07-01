@@ -1,0 +1,17 @@
+<div class="vendor-module-section"data-bind="scope: 'section'">
+    <p data-bind="text: customsection().customdata"></p>
+    <p data-bind="text: customsection().customdata2"></p>
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "section": {
+                        "component": "Cache_Contents/js/section"
+                    }
+                }
+            }
+        }
+    }
+</script>
