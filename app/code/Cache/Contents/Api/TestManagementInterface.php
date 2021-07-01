@@ -1,8 +1,10 @@
 <?php
+
 namespace Cache\Contents\Api;
 
 
-interface TestManagementInterface {
+interface TestManagementInterface
+{
 
 
     /**

@@ -1,7 +1,15 @@
 <?xml version="1.0" ?>
-<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
-    <route method="GET" url="/V1/mageplaza-helloworld/:params">
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route method="GET" url="/V1/simple-example/:params">
         <service class="Cache\Contents\Api\TestManagementInterface" method="getPost"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <route method="GET" url="/V1/product-example/:id/:name">
+        <service class="Cache\Contents\Api\ProductInfoInterface" method="getProductById"/>
         <resources>
             <resource ref="anonymous"/>
         </resources>
