@@ -62,5 +62,12 @@
 <!--            <argument name="resourceModel" xsi:type="string">Change\Module\Model\ResourceModel\Change</argument>-->
 <!--        </arguments>-->
 <!--    </virtualType>-->
+
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="changeSomethingExample" type="Change\Module\Plugin\ProductPlugin" sortOrder="1" />
+    </type>
+    <type name="Magento\Checkout\Model\Cart">
+        <plugin name="changeSomethingExample" type="Change\Module\Plugin\Cart" sortOrder="1" />
+    </type>
 </config>
 

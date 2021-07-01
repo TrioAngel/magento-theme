@@ -12,7 +12,6 @@ class Index extends \Magento\Framework\App\Action\Action
     public function execute()
     {
         $pageResult = $this->resultFactory->create('page');
-        die('hello');
         return $pageResult;
     }
 }
