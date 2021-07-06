@@ -68,20 +68,17 @@
         </referenceContainer>
 
 
-        <move element="form.subscribe" destination="footer.part"/>
         <referenceBlock name="footer_links" remove="true"/>
         <referenceBlock name="copyright" remove="true"/>
-
         <referenceBlock name="header.links" remove="true" />
 
-
         <move element="logo" destination="header.part"/>
-        <move element="top.search" destination="page_top_part" />
+        <move element="minicart" destination="header.part" />
 
         <move element="navigation.sections" destination="page_top_part" />
-        <move element="minicart" destination="header.part" />
         <move element="breadcrumbs" destination="page_top_part"/>
+        <move element="top.search" destination="page_top_part" />
 
-
+        <move element="form.subscribe" destination="footer.part"/>
     </body>
 </page>
