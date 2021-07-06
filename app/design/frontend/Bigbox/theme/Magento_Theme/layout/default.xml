@@ -10,8 +10,10 @@
     <update handle="default_head_blocks"/>
     <body>
         <referenceContainer name="header-wrapper">
-            <block class="Magento\Framework\View\Element\Template" name="header.part" template="Magento_Theme::header_part/header.phtml">
-                <block class="Magento\Cms\Block\Block" name="header_1">
+            <block class="Magento\Framework\View\Element\Template" name="header.part" template="Magento_Theme::header_part/header.phtml" >
+            <block class="Magento\Customer\Block\Form\Login" name="customer_form_login_modal" template="Magento_Customer::form/login.phtml" />
+            <block class="Magento\Customer\Block\Form\Register" name="customer_form_register_modal" template="Magento_Customer::form/register.phtml" />
+            <block class="Magento\Cms\Block\Block" name="header_1">
                     <arguments>
                         <argument name="block_id" xsi:type="string">header_column_1</argument>
                     </arguments>

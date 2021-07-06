@@ -13,7 +13,7 @@
     <div class="column text-right">
         <div class="col-column">
             <?= $this->getChildHtml("header_3") ?>
-            <p><a href="#"><?= __('Գրանցում') ?></a> / <a href="#"><?= __('Մուտք') ?></a></p>
+            <p><a href="#" id="register" ><?= __('Գրանցում') ?></a> / <a href="#" id="loginmodal"><?= __('Մուտք') ?></a></p>
         </div>
         <div class="col-column last-one">
             <?= $this->getChildHtml("minicart")?>
@@ -21,3 +21,36 @@
         </div>
     </div>
 </div>
+
+<div id="register-modal">
+    <?= $this->getChildHtml("customer_form_register_modal")?>
+</div>
+
+<div id="login-modal">
+    <?= $this->getChildHtml("customer_form_login_modal")?>
+</div>
+
+<script type="text/javascript">
+    require([
+        "jquery",
+        "Magento_Ui/js/modal/modal"
+    ],function($, modal) {
+
+        var options = {
+            type: 'popup',
+            responsive: true,
+            title: false,
+            buttons: false
+        };
+
+        var popup = modal(options, $('#register-modal'));
+        $("#register").click(function() {
+            $('#register-modal').modal('openModal');
+        });
+
+        var popup2 = modal(options, $('#login-modal'));
+        $("#loginmodal").click(function() {
+            $('#login-modal').modal('openModal');
+        });
+    });
+</script>
