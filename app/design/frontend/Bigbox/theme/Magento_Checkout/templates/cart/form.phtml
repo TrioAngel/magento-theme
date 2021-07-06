@@ -61,29 +61,17 @@
                title="<?= $block->escapeHtml(__('Continue Shopping')) ?>">
                 <span><?= /* @escapeNotVerified */ __('Continue Shopping') ?></span>
             </a>
+            <a class="action continue-shopping"
+               href="<?= $block->escapeUrl($block->getContinueShoppingUrl()) ?>"
+               title="<?= $block->escapeHtml(__('Continue Shopping')) ?>">
+                <span><?= /* @escapeNotVerified */ __('Continue Shopping') ?></span>
+            </a>
         <?php endif; ?>
-        <a class="action continue-shopping"
-           href="<?= $block->escapeUrl($block->getContinueShoppingUrl()) ?>"
-           title="<?= $block->escapeHtml(__('Continue Shopping')) ?>">
-            <span><?= /* @escapeNotVerified */ __('Continue Shopping') ?></span>
+        <a class="action checkout-cart"
+           href="<?= $block->getUrl('checkout', ['_secure' => true]);?>"
+           title="<?= $block->escapeHtml(__('Proceed to Checkout')) ?>">
+            <span><?= /* @escapeNotVerified */ __('Proceed to Checkout') ?></span>
         </a>
-        <button type="submit"
-                name="update_cart_action"
-                data-cart-empty=""
-                value="empty_cart"
-                title="<?= $block->escapeHtml(__('Clear Shopping Cart')) ?>"
-                class="action clear" id="empty_cart_button">
-            <span><?= /* @escapeNotVerified */ __('Clear Shopping Cart') ?></span>
-        </button>
-        <button type="submit"
-                name="update_cart_action"
-                data-cart-item-update=""
-                value="update_qty"
-                title="<?= $block->escapeHtml(__('Update Shopping Cart')) ?>"
-                class="action update">
-            <span><?= /* @escapeNotVerified */ __('Update Shopping Cart') ?></span>
-        </button>
-        <input type="hidden" value="" id="update_cart_action_container" data-cart-item-update=""/>
     </div>
 </form>
 
