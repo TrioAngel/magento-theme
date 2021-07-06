@@ -1,113 +1,119 @@
-.block-search {
-  position: absolute;
-  display: none;
-  z-index: 100;
-  right: 15%;
-  width: 395px;
-  .block-content {
-    padding: 11px 17px 11px 13px;
-    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.25);
-    border-radius: 4px;
-    .actions {
-      display: none;
-    }
-    input {
-      border: none;
-      box-shadow: none;
-      border-bottom: 0.5px solid #D0D0D0;
-    }
-  }
-}
+//
+//  Common
+//  _____________________________________________
 
-.breadcrumbs {
-  border-top: 0.2px solid rgba(0, 0, 0, 0.1);
-  padding: 20px 0 0;
-
-  .items {
-    .item {
-      color: @color-hover-black;
-      a {
-        color: #5C5C5C;
-        text-decoration: none;
-      }
-      &:not(:last-child):after {
-        margin: 0 2px;
-        font-family: none;
-        content: '/';
-        font-size: 12px;
-      }
-    }
-  }
-}
-
-.show-hide {
-  display: block;
-}
-
-.last-search{
-  max-width: 1280px;
-  text-align: end;
-  margin: auto;
-  i {
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 600;
-    margin-right: 5px;
-    position: relative;
-    top: -35px;
+& when (@media-common = true) {
+  .block-search {
+    position: absolute;
+    display: none;
     z-index: 100;
-  }
-}
-
-.nav-sections {
-  background-color: @color-white-color;
-  margin-bottom: 0px;
-
-  .navigation {
-    background-color: @color-white-color;
-    margin-top: 10px;
-
-    .level0 {
-      margin: 0 17px 0 0;
-      ul {
-        text-align: left;
-        padding: 25px 15px 35px 25px;
+    right: 15%;
+    width: 395px;
+    .block-content {
+      padding: 11px 17px 11px 13px;
+      box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.25);
+      border-radius: 4px;
+      .actions {
+        display: none;
+      }
+      input {
         border: none;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-        li {
-          &:hover {
-            background-color: @color-white-color;
-          }
-          a {
-            padding: 0;
-            &.ui-state-focus {
-                background-color: @color-white-color;
-            }
+        box-shadow: none;
+        border-bottom: 0.5px solid #D0D0D0;
+      }
+    }
+  }
+
+  .breadcrumbs {
+    border-top: 0.2px solid rgba(0, 0, 0, 0.1);
+    padding: 20px 0 0;
+
+    .items {
+      .item {
+        color: @color-hover-black;
+        a {
+          color: #5C5C5C;
+          text-decoration: none;
+        }
+        &:not(:last-child):after {
+          margin: 0 2px;
+          font-family: none;
+          content: '/';
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .show-hide {
+    display: block;
+  }
+
+  .last-search {
+    max-width: 1280px;
+    text-align: end;
+    margin: auto;
+    i {
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: 600;
+      margin-right: 5px;
+      position: relative;
+      top: -35px;
+      z-index: 100;
+    }
+  }
+
+  .nav-sections {
+    background-color: @color-white-color;
+    margin-bottom: 0px;
+
+    .navigation {
+      background-color: @color-white-color;
+      margin-top: 10px;
+
+      .level0 {
+        margin: 0 17px 0 0;
+        ul {
+          text-align: left;
+          padding: 25px 15px 35px 25px;
+          border: none;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+          li {
             &:hover {
               background-color: @color-white-color;
             }
+            a {
+              padding: 0;
+              &.ui-state-focus {
+                background-color: @color-white-color;
+              }
+              &:hover {
+                background-color: @color-white-color;
+              }
+            }
           }
         }
       }
-    }
 
-    .active.level0 {
-      a {
-        border: none !important;
-      }
-    }
-
-    ul {
-      text-align: center;
-      li {
+      .active.level0 {
         a {
-          color: @color-hover-black !important;
-          font-size: 13px;
-          line-height: 15px;
-          font-weight: normal;
+          border: none !important;
         }
-        a:hover {
-          color: @color-red !important;;
+      }
+
+      ul {
+        text-align: center;
+        li {
+          a {
+            color: @color-hover-black !important;
+            font-size: 13px;
+            line-height: 15px;
+            font-weight: normal;
+          }
+          a:hover {
+            color: @color-red !important;;
+          }
         }
       }
     }
