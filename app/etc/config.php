@@ -2,8 +2,8 @@
 return array (
   'modules' => 
   array (
-    'Cache_Contents' => 1,
-    'Change_Module' => 1,
+    'Cache_Contents' => 0,
+    'Change_Module' => 0,
     'Magento_Store' => 1,
     'Magento_AdvancedPricingImportExport' => 1,
     'Magento_Directory' => 1,
