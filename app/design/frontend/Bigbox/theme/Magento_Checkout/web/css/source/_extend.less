@@ -31,7 +31,107 @@
         .column.main {
           .cart-container {
             .form.form-cart {
-
+              width: 80%;
+              padding: 0;
+              margin: 0 auto;
+              float: none;
+              .form-footer-part {
+                border-top: 1px solid #cccccc;
+                text-align: right;
+                p {
+                  margin: 10px 0 25px;
+                  color: #787878;
+                  font-size: 13px;
+                  line-height: 15px;
+                }
+                .total-price-only {
+                  margin-top: 10px;
+                  font-size: 13px;
+                  line-height: 15px;
+                  font-weight: 700;
+                  span {
+                    font-size: 18px;
+                    line-height: 20px;
+                    padding-left: 15px;
+                  }
+                }
+              }
+              table {
+                thead {
+                  th {
+                    font-size: 14px;
+                    font-weight: normal;
+                    line-height: 16px;
+                    color: #585858;
+                    &.price {
+                      text-align: left;
+                    }
+                  }
+                }
+                tbody {
+                  border: none;
+                  td {
+                    vertical-align: inherit;
+                    padding-top: 10px;
+                    padding-bottom: 0px;
+                  }
+                  .col.item {
+                    .product-item-photo {
+                      img {
+                        width: 125px !important;
+                        height: 125px !important;
+                      }
+                    }
+                    .product-item-details {
+                      vertical-align: inherit;
+                      padding-top: 15px;
+                      .product-item-name {
+                        a {
+                          font-size: 14px;
+                          line-height: 16px;
+                          color: #000000;
+                          font-weight: normal;
+                        }
+                      }
+                    }
+                  }
+                  .col.price {
+                    text-align: left;
+                    color: @color-gray-strong;
+                    .price {
+                      font-weight: normal;
+                      font-size: 14px;
+                    }
+                    .col.subtotal {
+                      .price {
+                        color: @color-gray-strong;
+                        font-size: 14px;
+                        line-height: 16px;
+                        font-weight: bold;
+                      }
+                    }
+                  }
+                  .close-item-btn {
+                    padding-right: 15px;
+                    .actions-toolbar {
+                      .action-edit {
+                        display: none;
+                      }
+                      .action-delete{
+                        &:hover {
+                          color: #BABABA;
+                        }
+                        &:before {
+                          content: '\e616';
+                          font-size: 13px;
+                          font-weight: 600;
+                          color: #BABABA;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }

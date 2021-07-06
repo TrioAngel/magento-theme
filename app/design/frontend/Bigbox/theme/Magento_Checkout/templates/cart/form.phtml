@@ -42,6 +42,18 @@
             <div class="cart-products-toolbar cart-products-toolbar-bottom toolbar" data-attribute="cart-products-toolbar-bottom"><?= $block->getPagerHtml() ?></div>
         <?php endif ?>
     </div>
+    <div class="form-footer-part">
+        <div class="total-price-only">
+            <?= /* @escapeNotVerified */ __('ԸՆԴԱՄԵՆԸ: ')?>
+            <span><?php
+            $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+            $cart = $objectManager->get('\Magento\Checkout\Model\Cart');
+            $subtotal = $cart->getQuote()->getSubtotal();
+            echo $this->helper('Magento\Framework\Pricing\Helper\Data')->currency(number_format($subtotal,2), true, false);
+            ?></span>
+        </div>
+        <p><i>Shipping, taxes, and discounts will be calculated at checkout</i></p>
+    </div>
     <div class="cart main actions">
         <?php if ($block->getContinueShoppingUrl()): ?>
             <a class="action continue"
@@ -50,6 +62,11 @@
                 <span><?= /* @escapeNotVerified */ __('Continue Shopping') ?></span>
             </a>
         <?php endif; ?>
+        <a class="action continue-shopping"
+           href="<?= $block->escapeUrl($block->getContinueShoppingUrl()) ?>"
+           title="<?= $block->escapeHtml(__('Continue Shopping')) ?>">
+            <span><?= /* @escapeNotVerified */ __('Continue Shopping') ?></span>
+        </a>
         <button type="submit"
                 name="update_cart_action"
                 data-cart-empty=""
@@ -69,6 +86,7 @@
         <input type="hidden" value="" id="update_cart_action_container" data-cart-item-update=""/>
     </div>
 </form>
+
 <?= $block->getChildHtml('checkout.cart.order.actions') ?>
 <?= $block->getChildHtml('shopping.cart.table.after') ?>
 
