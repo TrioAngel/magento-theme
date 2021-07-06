@@ -93,7 +93,7 @@ $canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinima
                 <span><?= /* @escapeNotVerified */ __('Qty') ?></span>
             </label>
             <div class="control qty">
-                <input id="cart-<?= /* @escapeNotVerified */ $_item->getId() ?>-qty"
+                <input id="qtysubmit cart-<?= /* @escapeNotVerified */ $_item->getId() ?>-qty"
                        name="cart[<?= /* @escapeNotVerified */ $_item->getId() ?>][qty]"
                        data-cart-item-id="<?= /* @escapeNotVerified */ $_item->getSku() ?>"
                        value="<?= /* @escapeNotVerified */ $block->getQty() ?>"
@@ -103,6 +103,10 @@ $canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinima
                        class="input-text qty"
                        data-validate="{required:true,'validate-greater-than-zero':true}"
                        data-role="cart-item-qty"/>
+            </div>
+            <div class="qty-add-remove">
+                <span id="qtyUp">&#8249;</span>
+                <span id="qtyDown">&#8250;</span>
             </div>
         </div>
     </td>
