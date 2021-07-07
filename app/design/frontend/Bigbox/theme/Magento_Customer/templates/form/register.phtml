@@ -16,12 +16,20 @@
 <?= $block->getChildHtml('customer.form.register.extra') ?>
 <form class="form create account form-create-account" action="<?= $block->escapeUrl($block->getPostActionUrl()) ?>" method="post" id="form-validate" enctype="multipart/form-data" autocomplete="off">
     <?= /* @noEscape */ $block->getBlockHtml('formkey'); ?>
-    <fieldset class="fieldset create info">
+    <fieldset class="fieldset create account" data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>">
         <input type="hidden" name="success_url" value="<?= $block->escapeUrl($block->getSuccessUrl()) ?>">
         <input type="hidden" name="error_url" value="<?= $block->escapeUrl($block->getErrorUrl()) ?>">
-        <?= $block->getLayout()->createBlock('Magento\Customer\Block\Widget\Name')->setObject($block->getFormData())->setForceUseCustomerAttributes(true)->toHtml() ?>
-    </fieldset>
-    <fieldset class="fieldset create account" data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>">
+
+        <div class="field field-name-firstname required">
+            <div class="control">
+                <input type="text" placeholder="<?= $block->escapeHtml(__('First Name')) ?>" id="firstname" name="firstname" value="" title="First Name" class="input-text required-entry" data-validate="{required:true}">
+            </div>
+        </div>
+        <div class="field field-name-lastname required">
+            <div class="control">
+                <input type="text" id="lastname" placeholder="<?= $block->escapeHtml(__('Last Name')) ?>" name="lastname" value="" title="Last Name" class="input-text required-entry" data-validate="{required:true}">
+            </div>
+        </div>
         <div class="field required">
             <div class="control">
                 <input type="email" name="email" placeholder="<?= $block->escapeHtml(__('Email')) ?>" autocomplete="email" id="email_address" value="<?= $block->escapeHtmlAttr($block->getFormData()->getEmail()) ?>" title="<?= $block->escapeHtmlAttr(__('Email')) ?>" class="input-text" data-validate="{required:true, 'validate-email':true}">
