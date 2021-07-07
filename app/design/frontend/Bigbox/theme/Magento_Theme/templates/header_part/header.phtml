@@ -22,12 +22,16 @@
     </div>
 </div>
 
-<div id="register-modal">
+<div id="register-modal" style="display: none;">
     <?= $this->getChildHtml("customer_form_register_modal")?>
 </div>
 
-<div id="login-modal">
+<div id="login-modal" style="display: none;">
     <?= $this->getChildHtml("customer_form_login_modal")?>
+</div>
+
+<div id="forgot-modal" style="display: none;">
+    <?= $this->getChildHtml("forgotPassword")?>
 </div>
 
 <script type="text/javascript">
@@ -39,6 +43,7 @@
         var options = {
             type: 'popup',
             responsive: true,
+            modalClass: 'login-register',
             title: false,
             buttons: false
         };
@@ -46,11 +51,29 @@
         var popup = modal(options, $('#register-modal'));
         $("#register").click(function() {
             $('#register-modal').modal('openModal');
+            $('#register-modal').css('display', 'unset');
+        });
+        $("#signupaction").click(function() {
+            $('#register-modal').modal('openModal');
+            $('#login-modal').modal('closeModal');
+        });
+
+        var popup3 = modal(options, $('#forgot-modal'));
+        $("#forgot-pass").click(function() {
+            $('#forgot-modal').modal('openModal');
+            $('#login-modal').modal('closeModal');
+            $('#forgot-modal').css('display', 'unset');
+        });
+
+        $("#goback").click(function() {
+            $('#login-modal').modal('openModal');
+            $('#forgot-modal').modal('closeModal');
         });
 
         var popup2 = modal(options, $('#login-modal'));
         $("#loginmodal").click(function() {
             $('#login-modal').modal('openModal');
+            $('#login-modal').css('display', 'unset');
         });
     });
 </script>

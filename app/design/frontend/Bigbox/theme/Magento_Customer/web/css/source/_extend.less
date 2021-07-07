@@ -1,0 +1,118 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+  //
+  //  Login/Register Modal
+  //  ---------------------------------------------
+  .login-register {
+    .modal-inner-wrap {
+      width: 35%;
+      .modal-content {
+        padding: 0 52px 20px;
+        .head-title {
+          text-align: center;
+          margin: 30px 0 65px;
+          &.register-modal-head {
+            h1::after {
+              right: 67px;
+            }
+          }
+          h1 {
+            font-size: 22px;
+            line-height: 26px;
+            font-weight: normal;
+            &::after {
+              content: '';
+              width: 28px;
+              height: 3px;
+              background-color: @color-red;
+              display: inline-block;
+              position: relative;
+              top: 20px;
+              right: 52px;
+            }
+          }
+        }
+        .form.create.account,
+        .form.password.forget {
+          min-width: 0;
+          width: 100%;
+        }
+        .field {
+          .note {
+            font-size: 12px;
+            line-height:25px;
+            color: @color-gray-text;
+          }
+          .control {
+            input {
+              padding: 10px 20px;
+              border: 1px solid @color-border-gray;
+              border-radius: 4px;
+              box-shadow: none;
+              font-size: 13px;
+              line-height: 28px;
+              color: @color-gray-text;
+              height: 50px;
+            }
+          }
+        }
+        .actions-toolbar {
+          text-align: center;
+          .secondary {
+            margin-bottom: 15px;
+            display: block;
+            .remind {
+              text-decoration: none;
+              color: @color-gray-text;
+              font-size: 12px;
+              line-height: 25px;
+            }
+            .goback {
+              margin-top: 20px;
+              color: #000000;
+              text-decoration: underline;
+              span {
+                font-size: 13px;
+                line-height: 28px;
+              }
+            }
+          }
+          .primary {
+            text-align: center;
+            display: block;
+            float: none;
+            .action.primary {
+              width: 100%;
+              background-color: @color-product-btn;
+              border-radius: 49px;
+              border: none;
+              padding: 10px 0;
+              span {
+                font-size: 13px;
+                line-height: 28px;
+                text-transform: uppercase;
+              }
+              &:hover {
+                background-color: @color-product-btn;
+              }
+            }
+          }
+          .third-action {
+            margin-top: 10px;
+            .signup {
+              color: #000000;
+              text-decoration: underline;
+              span {
+                font-size: 13px;
+                line-height: 28px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -11,6 +11,7 @@
     <body>
         <referenceContainer name="header-wrapper">
             <block class="Magento\Framework\View\Element\Template" name="header.part" template="Magento_Theme::header_part/header.phtml" >
+            <block class="Magento\Customer\Block\Account\Forgotpassword" name="forgotPassword" template="Magento_Customer::form/forgotpassword.phtml" />
             <block class="Magento\Customer\Block\Form\Login" name="customer_form_login_modal" template="Magento_Customer::form/login.phtml" />
             <block class="Magento\Customer\Block\Form\Register" name="customer_form_register_modal" template="Magento_Customer::form/register.phtml" />
             <block class="Magento\Cms\Block\Block" name="header_1">
