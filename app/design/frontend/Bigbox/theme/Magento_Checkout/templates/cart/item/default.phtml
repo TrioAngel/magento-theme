@@ -105,8 +105,8 @@ $canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinima
                        data-role="cart-item-qty"/>
             </div>
             <div class="qty-add-remove">
-                <span id="qtyUp">&#8249;</span>
-                <span id="qtyDown">&#8250;</span>
+                <span class="addQtyCart">&#8249;</span>
+                <span class="minusQtyCart">&#8250;</span>
             </div>
         </div>
     </td>
@@ -120,3 +120,36 @@ $canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinima
     </td>
 </tr>
 </tbody>
+
+<script>
+    require([
+        'jquery'
+    ], function ($) {
+        var submitForm;
+        $('.minusQtyCart').off().on('click', function()  {
+            console.log('hello');
+            var qtyField = $(this).parent().parent().find($('input[name$="[qty]"]'));
+            var current_qty = parseInt(qtyField.val());
+            if (current_qty > 1 ) {
+                qtyField.val(current_qty - 1);
+                clearTimeout(submitForm);
+                submitForm = setTimeout(function () {
+                    $('#form-validates').submit();
+                }, 500);
+            } else {
+                var removeLink = $(this).parents('tbody').find('.action-delete');
+                removeLink.click();
+            }
+        });
+
+        $('.addQtyCart').off().on('click', function() {
+            var qtyField = $(this).parent().parent().find($('input[name$="[qty]"]'));
+            qtyField.val(parseInt(qtyField.val()) + 1);
+            clearTimeout(submitForm);
+            submitForm = setTimeout(function () {
+                $('#form-validates').submit();
+            }, 500);
+
+        });
+    });
+</script>
