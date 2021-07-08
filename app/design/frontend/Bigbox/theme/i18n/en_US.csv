@@ -30,3 +30,17 @@ Please enter your email address below to receive a password reset link.,Դուք
 Reset My Password,ՎԵՐԱԿԱՆԳՆԵԼ
 First Name,Անուն
 Last Name,Ազգանուն
+"Contact Information","ԱՆՁՆԱԿԱՆ ԻՆՖՈՐՄԱՑԻԱ"
+"Default Billing Address","ՀԻՄՆԱԿԱՆ ՎՃԱՐՄԱՆ ՀԱՍՑԵ"
+"Default Shipping Address","ՀԻՄՆԱԿԱՆ ԱՌԱՔՄԱՆ ՀԱՍՑԵ"
+"Address Book","ՀԱՍՑԵՆԵՐ"
+"You have not set a default billing address.","Դուք չեք ավելացրել հիմնական վճարման հասցե:"
+"You have not set a default shipping address.","Դուք չեք ավելացրել հիմնական առաքման հասցե:"
+"Edit Address","Խմբագրել"
+"Manage Addresses","Խմբագրել"
+"View All","Տեսնել Բոլորը"
+"My Orders","ՊԱՏՎԵՐՆԵՐ"
+"Account Information","ԱՆՁՆԱԿԱՆ ՏՎՅԱԼՆԵՐ"
+"Account Dashboard","ԳԼԽԱՎՈՐ"
+"My Dashboard","Իմ Հաշիվը"
+"Change Password","Փոխել Գաղտնաբառը"
