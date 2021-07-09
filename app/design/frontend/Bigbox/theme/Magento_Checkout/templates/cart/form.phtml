@@ -81,7 +81,6 @@
     ], function ($) {
         var submitForm;
         $('.minusQtyCart').off().on('click', function()  {
-            console.log('hello');
             var qtyField = $(this).parent().parent().find($('input[name$="[qty]"]'));
             var current_qty = parseInt(qtyField.val());
             if (current_qty > 1 ) {
