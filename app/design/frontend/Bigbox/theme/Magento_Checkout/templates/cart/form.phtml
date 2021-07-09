@@ -44,12 +44,9 @@
     </div>
     <div class="form-footer-part">
         <div class="total-price-only">
-            <?= /* @escapeNotVerified */ __('ԸՆԴԱՄԵՆԸ: ')?>
-            <span><?php
-            $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-            $cart = $objectManager->get('\Magento\Checkout\Model\Cart');
-            $subtotal = $cart->getQuote()->getSubtotal();
-            echo $this->helper('Magento\Framework\Pricing\Helper\Data')->currency(number_format($subtotal,2), true, false);
+            <?= /* @escapeNotVerified */ __('Total: ')?>
+            <span><?php $test = $block->getQuote()->getSubtotal();
+            echo $this->helper('Magento\Framework\Pricing\Helper\Data')->currency(number_format($test,2), true, false);
             ?></span>
         </div>
         <p><i>Shipping, taxes, and discounts will be calculated at checkout</i></p>
@@ -77,4 +74,5 @@
 
 <?= $block->getChildHtml('checkout.cart.order.actions') ?>
 <?= $block->getChildHtml('shopping.cart.table.after') ?>
+
 
