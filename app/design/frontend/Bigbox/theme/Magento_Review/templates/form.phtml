@@ -55,17 +55,17 @@
                     <?php endif ?>
                     <div class="field review-field-nickname required">
                         <div class="control">
-                            <input type="text" name="nickname" id="nickname_field" class="input-text" data-validate="{required:true}" data-bind="value: nickname()" placeholder="Անուն" />
+                            <input type="text" name="nickname" id="nickname_field" class="input-text" data-validate="{required:true}" data-bind="value: nickname()" placeholder="<?= $block->escapeHtml(__('First Name')) ?>" />
                         </div>
                     </div>
                     <div class="field review-field-email required">
                         <div class="control">
-                            <input type="email" name="title" id="email_field" class="input-text" data-validate="{required:true}" placeholder="Էլ. փոստ"/>
+                            <input type="email" name="title" id="email_field" class="input-text" data-validate="{required:true}" placeholder="<?= $block->escapeHtml(__('email post')) ?>"/>
                         </div>
                     </div>
                     <div class="field review-field-text required">
                         <div class="control">
-                            <textarea name="detail" id="review_field" cols="5" rows="3" data-validate="{required:true}" data-bind="value: review().detail" placeholder="Մեկնաբանություն"></textarea>
+                            <textarea name="detail" id="review_field" cols="5" rows="3" data-validate="{required:true}" data-bind="value: review().detail" placeholder="<?= $block->escapeHtml(__('comment ')) ?>"></textarea>
                         </div>
                     </div>
                 </fieldset>

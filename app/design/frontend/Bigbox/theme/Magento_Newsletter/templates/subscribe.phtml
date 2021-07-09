@@ -22,12 +22,12 @@
                 <label class="label" for="newsletter"><span><?= $block->escapeHtml(__('Sign Up for Our Newsletter:')) ?></span></label>
                 <div class="control">
                     <input name="email" type="email" id="newsletter"
-                           placeholder="<?= $block->escapeHtmlAttr(__('Էլ. հասցե')) ?>"
+                           placeholder="<?= $block->escapeHtmlAttr(__('Email address ')) ?>"
                            data-validate="{required:true, 'validate-email':true}"/>
                 </div>
             </div>
             <div class="actions">
-                <button class="action subscribe primary" title="<?= $block->escapeHtmlAttr(__('ԳՐԱՆՑՎԵԼ')) ?>" type="submit">
+                <button class="action subscribe primary" title="<?= $block->escapeHtmlAttr(__('subscribe ')) ?>" type="submit">
                     <span><?= $block->escapeHtml(__('ԳՐԱՆՑՎԵԼ')) ?></span>
                 </button>
             </div>
