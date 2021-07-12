@@ -9,7 +9,8 @@
 /** @var \Magento\Customer\Block\Address\Edit $block */
 ?>
 <?php $_company = $block->getLayout()->createBlock('Magento\Customer\Block\Widget\Company') ?>
-<?php $_fax = $block->getLayout()->createBlock('Magento\Customer\Block\Widget\Fax') ?>
+<?php $_telephone = $block->getLayout()->createBlock('Magento\Customer\Block\Widget\Telephone') ?>
+<?php $_title = $block->getTitle() ?>
 <form class="form-address-edit"
       action="<?= $block->escapeUrl($block->getSaveUrl()) ?>"
       method="post"
@@ -17,7 +18,13 @@
       enctype="multipart/form-data"
       data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>">
     <fieldset class="fieldset">
-        <legend class="legend"><span><?= $block->escapeHtml(__('Contact Information')) ?></span></legend><br>
+        <?php if($block->isDefaultBilling()) : ?>
+            <legend class="legend"><span><?= $block->escapeHtml(__('Default Billing Address')) ?></span></legend><br>
+        <?php elseif ($block->isDefaultShipping()) : ?>
+            <legend class="legend"><span><?= $block->escapeHtml(__('Default Shipping Address')) ?></span></legend><br>
+        <?php else: ?>
+            <legend class="legend"><span><?= $block->escapeHtml(__('new address')) ?></span></legend><br>
+        <?php endif; ?>
         <?= $block->getBlockHtml('formkey') ?>
         <input type="hidden" name="success_url" value="<?= $block->escapeUrl($block->getSuccessUrl()) ?>">
         <input type="hidden" name="error_url" value="<?= $block->escapeUrl($block->getErrorUrl()) ?>">
@@ -66,14 +73,26 @@
                        class="input-text validate-zip-international <?= $block->escapeHtmlAttr($this->helper('Magento\Customer\Helper\Address')->getAttributeValidationClass('postcode')) ?>">
             </div>
         </div>
+        <?php if ($_telephone->isEnabled()): ?>
+            <?= $_telephone->setTelephone($block->getAddress()->getTelephone())->toHtml() ?>
+        <?php endif ?>
         <div class="actions-toolbar">
             <div class="primary">
+                <?php if($_title->getText() == "Edit Address") : ?>
                 <button type="submit"
                         class="action save primary"
                         data-action="save-address"
                         title="<?= $block->escapeHtmlAttr(__('Save Address')) ?>">
                     <span><?= $block->escapeHtml(__('Save Address')) ?></span>
                 </button>
+                <?php else: ?>
+                    <button type="submit"
+                            class="action save primary"
+                            data-action="save-address"
+                            title="<?= $block->escapeHtmlAttr(__('add Address')) ?>">
+                        <span><?= $block->escapeHtml(__('add Address')) ?></span>
+                    </button>
+                <?php endif; ?>
             </div>
             <div class="secondary">
                 <a class="action back" href="<?= $block->escapeUrl($block->getBackUrl()) ?>">
