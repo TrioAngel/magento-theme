@@ -452,7 +452,7 @@
                     background: #FFFFFF;
                     text-align: right;
                   }
-                  &.subtotal {
+                  &.subtotal, &.shipping {
                     border-bottom: 1px solid #E9E8E8;
                     th {
                       color: #000;
@@ -499,6 +499,13 @@
           }
           .block-content {
             .box {
+              clear: left !important;
+              &:nth-child(2) {
+                clear: unset !important;
+              }
+              &.box-order-billing-method {
+                clear: none !important;
+              }
               width: 45% !important;
               padding: 0 20px 0;
               .box-title {
@@ -522,6 +529,35 @@
             }
           }
         }
+        .table-wrapper.orders-history {
+          border: none;
+          margin-bottom: 230px;
+          table {
+            border: 1px solid #E9E8E8;
+            thead tr th {
+              border: 1px solid #E9E8E8;
+              text-align: center;
+              font-size: 12px;
+              line-height: 23px;
+              font-weight: normal;
+              color: #000;
+            }
+            tbody tr {
+              text-align: center;
+              td {
+                border-right: 1px solid #E9E8E8;
+                border-top: none;
+                color: #565656;
+                font-size: 13px;
+                line-height: 15px;
+                a {
+                  color: @color-product-btn;
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
         .actions-toolbar {
           margin-top: 35px;
           .action.primary.add {
@@ -537,7 +573,8 @@
               font-weight: normal;
             }
           }
-        } //sa texapoxel
+        }
+        //sa texapoxel
       }
     }
   }
