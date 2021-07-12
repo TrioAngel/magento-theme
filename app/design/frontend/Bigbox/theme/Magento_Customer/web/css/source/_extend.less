@@ -43,7 +43,7 @@
         .field {
           &.note {
             font-size: 12px;
-            line-height:25px;
+            line-height: 25px;
             color: @color-gray-text;
           }
           .control {
@@ -123,7 +123,7 @@
   //
   //  Customer Account Address
   //  ---------------------------------------------
-  .customer-address-index {
+  .account {
     .columns {
       .sidebar.sidebar-main {
         margin-top: 120px;
@@ -148,6 +148,149 @@
             }
           }
         }
+        .block-dashboard-info {
+          margin-bottom: 80px;
+          .box-welcome {
+            .box-title {
+              margin-bottom: 30px;
+              color: #000;
+              span {
+                font-size: 13px;
+                line-height: 15px;
+                font-weight: normal;
+              }
+            }
+            .box-content {
+              font-size: 13px;
+              line-height: 15px;
+              color: #696969;
+            }
+          }
+          .box-information {
+            .box-title {
+              margin-bottom: 30px;
+              line-height: 16px;
+              letter-spacing: 0.02em;
+              span {
+                font-size: 14px;
+              }
+            }
+            .box-content {
+              color: #4A4A4A;
+              font-size: 14px;
+              line-height: 16px;
+              margin-bottom: 30px;
+              .icon-user-2:before {
+                content: "\e956";
+                font-family: 'icomoon' !important;
+                margin-right: 10px;
+              }
+              .icon-Group:before {
+                content: "\e955";
+                margin-right: 10px;
+                font-family: 'icomoon' !important;
+              }
+            }
+          }
+          a {
+            color: #33C0CB;
+            text-decoration: none;
+            &:after {
+              border-color: #33C0CB;
+            }
+          }
+        }
+        .block-dashboard-addresses {
+          margin-bottom: 80px;
+          .block-title {
+            border: none;
+            margin-bottom: 10px;
+            strong {
+              font-weight: bold;
+              font-size: 14px;
+              text-transform: uppercase;
+              line-height: 16px;
+            }
+            a {
+              float: right;
+              margin-top: 5px;
+            }
+          }
+          .block-content {
+            border: 1px solid #E9E8E8;
+            padding: 20px;
+            .box {
+              .box-title span{
+                color: #000;
+                font-size: 13px;
+                line-height: 15px;
+                font-weight: normal;
+              }
+              .box-content {
+                address {
+                  color: #696969;
+                  line-height: 25px;
+                  font-size: 13px;
+                  a {
+                    color: #696969;
+                  }
+                }
+              }
+            }
+          }
+          a {
+            color: #33C0CB;
+            text-decoration: none;
+            &:after {
+              border-color: #33C0CB;
+            }
+          }
+        }
+        .block-dashboard-orders {
+          .block-title {
+            border: none;
+            margin-bottom: 30px;
+            strong {
+              font-weight: bold;
+              font-size: 14px;
+              line-height: 16px;
+            }
+            a {
+              float: right;
+              margin-top: 5px;
+            }
+          }
+          .block-content {
+            .table-order-items.recent {
+              text-align: center;
+              border: 1px solid #E9E8E8 ;
+              thead tr th {
+                text-align: center;
+                border: 1px solid #E9E8E8 ;
+                color: #000;
+                font-size: 12px;
+                line-height: 23px;
+                font-weight: normal;
+              }
+              tbody tr td {
+                border-right: 1px solid #E9E8E8;
+                border-bottom: none;
+                border-top: none;
+                border-left: none;
+                font-size: 13px;
+                line-height: 15px;
+                color: #565656;
+              }
+            }
+          }
+          a {
+            color: #33C0CB;
+            text-decoration: none;
+            &:after {
+              border-color: #33C0CB;
+            }
+          }
+        }
         .actions-toolbar {
           margin-top: 35px;
           .action.primary.add {
@@ -163,6 +306,7 @@
             }
           }
         }
+        //sa texapoxel
       }
     }
   }

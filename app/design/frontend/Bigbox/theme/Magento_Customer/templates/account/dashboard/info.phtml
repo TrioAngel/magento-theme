@@ -26,8 +26,10 @@
             </strong>
             <div class="box-content">
                 <p>
-                    <?= $block->escapeHtml($block->getName()) ?><br>
-                    <?= $block->escapeHtml($block->getCustomer()->getEmail()) ?><br>
+                    <span class="icon-Group"></span><?= $block->escapeHtml($block->getName()) ?><br>
+                </p>
+                <p>
+                    <span class="icon-user-2"></span><?= $block->escapeHtml($block->getCustomer()->getEmail()) ?><br>
                 </p>
             </div>
             <div class="box-actions">
