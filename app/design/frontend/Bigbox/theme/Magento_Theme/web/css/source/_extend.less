@@ -32,7 +32,7 @@
                   margin-bottom: 5px;
                   &::before {
                     font-family: 'icomoon' !important;
-                    content: "\e900" !important;
+                    content: "\e918" !important;
                     font-size: 25px;
                     color: @color-hover-black;
                     float: left;
@@ -180,6 +180,14 @@
             }
             .icon-img {
               text-align: center;
+              .icon-headersmile:before {
+                content: "\e915";
+                font-size: 25px;
+              }
+              .icon-headercar:before {
+                content: "\e914";
+                font-size: 40px;
+              }
             }
             p {
               font-size: 12px;
@@ -189,10 +197,17 @@
                 color: @color-hover-black;
                 text-decoration: none;
               }
-              i {
-                font-size: 14px;
+              .icon-phoneicon:before {
+                content: "\e906";
                 float: left;
                 padding: 0 20px 20px 0;
+                font-size: 14px;
+              }
+              .icon-mailicon:before {
+                content: "\e903";
+                float: left;
+                padding: 0 20px 20px 0;
+                font-size: 14px;
               }
             }
           }
@@ -313,9 +328,20 @@
               text-decoration: none;
               color: @color-white-color;
             }
-            i {
+            .icon-phonefooter:before {
+              content: "\e905";
+              color: #fff;
               margin-right: 18px;
-              font-size: 14px;
+            }
+            .icon-mapfooter:before {
+              content: "\e904";
+              color: #fff;
+              margin-right: 18px;
+            }
+            .icon-emailfooter:before {
+              content: "\e902";
+              color: #fff;
+              margin-right: 18px;
             }
             span {
               font-size: 13px;

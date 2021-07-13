@@ -128,23 +128,23 @@
                       }
                       .qty-add-remove {
                         position: inherit;
-                        right: 8px;
+                        right: 5px;
                         display: inline-block;
-                        -webkit-transform: rotate(90deg);
-                        -moz-transform: rotate(90deg);
-                        -ms-transform: rotate(90deg);
-                        -o-transform: rotate(90deg);
-                        transform: rotate(90deg);
-                        border-left: 1px solid @color-border-gray;
-                        border-top: 1px solid @color-border-gray;
-                        border-right: 1px solid @color-border-gray;
-                        border-top-left-radius: 62px;
+                        border: 1px solid @color-border-gray;
+                        border-bottom-right-radius: 62px;
                         border-top-right-radius: 62px;
-                        padding: 0 8px 8px;
+                        padding: 5px 5px 13px 8px;
                         span {
+                          display: block;
                           cursor: pointer;
-                          font-size: 22px;
-                          margin-left: 3px;
+                          font-size: 10px;
+                          margin-right: 10px;
+                        }
+                        .icon-vectorupproduct:before {
+                          content: "\e917";
+                        }
+                        .icon-vectordownproduct:before {
+                          content: "\e916";
                         }
                       }
                     }

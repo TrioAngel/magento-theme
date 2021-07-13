@@ -14,8 +14,9 @@
         <div class="col-column">
             <?= $this->getChildHtml("header_3") ?>
             <?php $_loggedin = $this->helper('Magento\Checkout\Helper\Cart')->getCart()->getCustomerSession()->isLoggedIn(); ?>
+<!--    harcnel        -->
             <?php if( $_loggedin ) : ?>
-                <p><a href="<?= $block->escapeUrl("customer/account/logout") ?>" id="logout" ><?= __('logout') ?></a></p>
+                <p><a href="#" id="logout" ><?= __('acccount') ?></a> / <a href="#" id="logout" ><?= __('logout') ?></a></p>
             <?php else: ?>
                 <p><a href="#" id="register" ><?= __('register ') ?></a> / <a href="#" id="loginmodal"><?= __('login ') ?></a></p>
             <?php endif; ?>
