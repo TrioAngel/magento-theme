@@ -11,40 +11,39 @@
         <?= $this->getChildHtml('logo') ?>
     </div>
     <div class="column text-right">
-        <div class="col-column">
+        <div class="col-column" data-bind="scope: 'customer'">
             <?= $this->getChildHtml("header_3") ?>
-            <?php $_loggedin = $this->helper('Magento\Checkout\Helper\Cart')->getCart()->getCustomerSession()->isLoggedIn(); ?>
-<!--    harcnel        -->
-            <?php if( $_loggedin ) : ?>
-                <p><a href="#" id="logout" ><?= __('acccount') ?></a> / <a href="#" id="logout" ><?= __('logout') ?></a></p>
-            <?php else: ?>
-                <p><a href="#" id="register" ><?= __('register ') ?></a> / <a href="#" id="loginmodal"><?= __('login ') ?></a></p>
-            <?php endif; ?>
+            <!-- ko if: customer().fullname  -->
+            <p><a href="<?= $this->getUrl('customer/account') ?>" id="logout"><?= __('acccount') ?></a> / <a href="<?= $this->getUrl('customer/account/logout') ?>" id="logout"><?= __('logout') ?></a></p>
+            <!-- /ko -->
+            <!-- ko ifnot: customer().fullname  -->
+            <p><a href="#" id="register"><?= __('register ') ?></a> / <a href="#" id="loginmodal"><?= __('login ') ?></a></p>
+            <!-- /ko -->
         </div>
         <div class="col-column last-one">
-            <?= $this->getChildHtml("minicart")?>
+            <?= $this->getChildHtml("minicart") ?>
             <p><?= __('cart ') ?></p>
         </div>
     </div>
 </div>
 
 <div id="register-modal" style="display: none;">
-    <?= $this->getChildHtml("customer_form_register_modal")?>
+    <?= $this->getChildHtml("customer_form_register_modal") ?>
 </div>
 
 <div id="login-modal" style="display: none;">
-    <?= $this->getChildHtml("customer_form_login_modal")?>
+    <?= $this->getChildHtml("customer_form_login_modal") ?>
 </div>
 
 <div id="forgot-modal" style="display: none;">
-    <?= $this->getChildHtml("forgotPassword")?>
+    <?= $this->getChildHtml("forgotPassword") ?>
 </div>
 
 <script type="text/javascript">
     require([
         "jquery",
         "Magento_Ui/js/modal/modal"
-    ],function($, modal) {
+    ], function ($, modal) {
 
         var options = {
             type: 'popup',
@@ -55,31 +54,47 @@
         };
 
         var popup = modal(options, $('#register-modal'));
-        $("#register").click(function() {
+        $("#register").live('click', function() {
             $('#register-modal').modal('openModal');
             $('#register-modal').css('display', 'unset');
         });
-        $("#signupaction").click(function() {
+
+        $("#signupaction").live('click', function () {
             $('#register-modal').modal('openModal');
             $('#login-modal').modal('closeModal');
         });
 
         var popup3 = modal(options, $('#forgot-modal'));
-        $("#forgot-pass").click(function() {
+        $("#forgot-pass").click(function () {
             $('#forgot-modal').modal('openModal');
             $('#login-modal').modal('closeModal');
             $('#forgot-modal').css('display', 'unset');
         });
 
-        $("#goback").click(function() {
+        $("#goback").click(function () {
             $('#login-modal').modal('openModal');
             $('#forgot-modal').modal('closeModal');
         });
 
         var popup2 = modal(options, $('#login-modal'));
-        $("#loginmodal").click(function() {
+        $("#loginmodal").live('click', function () {
             $('#login-modal').modal('openModal');
             $('#login-modal').css('display', 'unset');
         });
     });
+</script>
+
+<script type="text/x-magento-init">
+        {
+            "*": {
+                "Magento_Ui/js/core/app": {
+                    "components": {
+                        "customer": {
+                            "component": "Magento_Customer/js/view/customer"
+                        }
+                    }
+                }
+            }
+        }
+
 </script>
