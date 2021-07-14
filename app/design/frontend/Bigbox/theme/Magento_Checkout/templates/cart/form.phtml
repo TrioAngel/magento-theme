@@ -46,7 +46,7 @@
         <div class="total-price-only">
             <?= /* @escapeNotVerified */ __('Total: ')?>
             <span><?php $test = $block->getQuote()->getSubtotal();
-            echo $this->helper('Magento\Framework\Pricing\Helper\Data')->currency(number_format($test,2), true, false);
+            echo $this->helper('Magento\Framework\Pricing\Helper\Data')->currency($test, true, false);
             ?></span>
         </div>
         <p><i>Shipping, taxes, and discounts will be calculated at checkout</i></p>
