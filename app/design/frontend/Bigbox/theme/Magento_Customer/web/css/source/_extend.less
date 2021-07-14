@@ -370,17 +370,63 @@
             margin-bottom: 10px;
             &.choice {
               margin: 24px 0;
-              input[type="checkbox"] {
-                width: 17px;
-                height: 17px;
-                box-shadow: none;
-              }
               label {
+                display: block;
+                position: relative;
+                padding-left: 30px;
+                margin-bottom: 12px;
+                cursor: pointer;
                 font-size: 14px;
                 line-height: 16px;
                 color: #4A4A4A;
-                vertical-align: text-top;
-                margin-left: 8px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                font-family: 'icomoon' !important;
+              }
+
+              /* Hide the browser's default checkbox */
+              label input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+              }
+
+              /* Create a custom checkbox */
+              .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 15px;
+                width: 15px;
+                border: 1px solid #D8D8D8;
+              }
+
+              /* When the checkbox is checked, add a blue background */
+              label input:checked ~ .checkmark {
+                border: 1px solid #D8D8D8;
+              }
+
+              /* Create the checkmark/indicator (hidden when not checked) */
+              .checkmark:after {
+                content: "\e900";
+                position: absolute;
+                display: none;
+                color: #33C0CB;
+              }
+
+              /* Show the checkmark when checked */
+              label input:checked ~ .checkmark:after {
+                display: block;
+              }
+
+              /* Style the checkmark/indicator */
+              label .checkmark:after {
+                bottom: 2px;
+                font-size: 25px;
               }
             }
             .control {

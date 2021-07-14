@@ -32,9 +32,18 @@
             <?= $_gender->setGender($block->getCustomer()->getGender())->toHtml() ?>
         <?php endif ?>
         <div class="field choice">
-            <input type="checkbox" name="change_password" id="change-password" data-role="change-password" value="1" title="<?= $block->escapeHtmlAttr(__('Change Password')) ?>"<?php if ($block->getChangePassword()): ?> checked="checked"<?php endif; ?> class="checkbox" />
-            <label class="label" for="change-password"><span><?= $block->escapeHtml(__('Change Password')) ?></span></label>
+            <label class="label" for="change-password"><span><?= $block->escapeHtml(__('Change Password')) ?></span>
+                <input type="checkbox" name="change_password" id="change-password" data-role="change-password" value="1" title="<?= $block->escapeHtmlAttr(__('Change Password')) ?>"<?php if ($block->getChangePassword()): ?> checked="checked"<?php endif; ?> class="checkbox" />
+                <span class="checkmark"></span>
+            </label>
+
         </div>
+
+
+
+
+
+
         <fieldset class="fieldset password" data-container="change-email-password">
             <div class="field password current required">
                 <label class="label" for="current-password"><span><?= $block->escapeHtml(__('Current Password')) ?></span></label>
