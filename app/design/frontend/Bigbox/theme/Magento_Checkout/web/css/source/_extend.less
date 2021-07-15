@@ -3,219 +3,219 @@
 //  _____________________________________________
 
 & when (@media-common = true) {
-  //
-  //  Shopping cart
-  //  ---------------------------------------------
-  .checkout-cart-index {
-    .page-main {
-      border-top: 1px solid rgba(0, 0, 0, 0.1);
-      .page-title-wrapper {
-        text-align: center;
-        margin: 50px 0 30px;
-        &::after {
-          content: '';
-          width: 28px;
-          height: 3px;
-          background-color: @color-red;
-          display: inline-block;
-          position: relative;
-          top: 20px;
-          right: 65px;
-        }
-        h1 {
-          font-size: 20px;
-          line-height: 23px;
-        }
-      }
-      .columns {
-        .column.main {
-          .cart-container {
-            .form.form-cart {
-              width: 85%;
-              padding: 0;
-              margin: 0 auto 150px;
-              float: none;
-              .form-footer-part {
-                border-top: 1px solid #cccccc;
-                text-align: right;
-                p {
-                  margin: 10px 0 25px;
-                  color: #787878;
-                  font-size: 13px;
-                  line-height: 15px;
+    //
+    //  Shopping cart
+    //  ---------------------------------------------
+    .checkout-cart-index {
+        .page-main {
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            .page-title-wrapper {
+                text-align: center;
+                margin: 50px 0 30px;
+                &::after {
+                    content: '';
+                    width: 28px;
+                    height: 3px;
+                    background-color: @color-red;
+                    display: inline-block;
+                    position: relative;
+                    top: 20px;
+                    right: 65px;
                 }
-                .total-price-only {
-                  margin-top: 20px;
-                  font-size: 13px;
-                  line-height: 15px;
-                  font-weight: 700;
-                  span {
-                    font-size: 18px;
-                    line-height: 20px;
-                    padding-left: 15px;
-                  }
+                h1 {
+                    font-size: 20px;
+                    line-height: 23px;
                 }
-              }
-              .cart.main.actions {
-                margin-top: 35px;
-                .checkout-cart {
-                  background-color: #33c0cb;
-                  color: #FFFFFF;
-                  text-decoration: none;
-                  padding: 12px 40px;
-                  font-weight: 400;
-                  border: none;
-                  border-radius: 62px;
-                  margin-left: 5px;
-                  span {
-                    font-size: 12px;
-                    line-height: 14px;
-                  }
-                }
-                .continue-shopping {
-                  border: 1px solid #33c0cb;
-                  padding: 12px 27px;
-                  border-radius: 62px;
-                  color: #33c0cb;
-                  text-decoration: none;
-                  span {
-                    font-size: 12px;
-                    line-height: 14px;
-                  }
-                }
-              }
-              table {
-                thead {
-                  th {
-                    font-size: 14px;
-                    font-weight: normal;
-                    line-height: 16px;
-                    color: #585858;
-                    &.price {
-                      text-align: left;
-                    }
-                    &.qty {
-                      text-align: center;
-                    }
-                    &.item {
-                      span {
-                        padding-left: 10px;
-                      }
-                    }
-                  }
-                }
-                tbody {
-                  border: none;
-                  td {
-                    vertical-align: inherit;
-                    padding-top: 10px;
-                    padding-bottom: 0px;
-                  }
-                  .col.qty {
-                    text-align: center;
-                    .field.qty {
-                      position: relative;
-                      .control.qty {
-                        display: inline-block;
-                        input {
-                          box-shadow: none;
-                          border-bottom-left-radius: 62px;
-                          border-top-left-radius: 62px;
-                          height: 40px;
-                          width: 52px;
-                          border-color: @color-border-gray;
-                        }
-                      }
-                      .qty-add-remove {
-                        position: inherit;
-                        right: 5px;
-                        height: 38px;
-                        vertical-align: bottom;
-                        display: inline-block;
-                        border: 1px solid @color-border-gray;
-                        border-bottom-right-radius: 62px;
-                        border-top-right-radius: 62px;
-                        padding: 0 5px;
-                        span {
-                          display: block;
-                          cursor: pointer;
-                          font-size: 9px;
-                          margin: 7px 12px 5px 8px;
-                        }
-                        .icon-vectorupproduct:before {
-                          content: "\e917";
-                          color: #DBDBDB;
-                        }
-                        .icon-vectordownproduct:before {
-                          content: "\e916";
-                          color: #DBDBDB;
-                        }
-                      }
-                    }
-                  }
-                  .col.item {
-                    .product-item-photo {
-                      img {
-                        width: 125px !important;
-                        height: 125px !important;
-                      }
-                    }
-                    .product-item-details {
-                      vertical-align: inherit;
-                      padding-top: 15px;
-                      .product-item-name {
-                        a {
-                          font-size: 14px;
-                          line-height: 16px;
-                          color: #000000;
-                          font-weight: normal;
-                        }
-                      }
-                    }
-                  }
-                  .col.price {
-                    text-align: left;
-                    color: @color-gray-strong;
-                    .price {
-                      font-weight: normal;
-                      font-size: 14px;
-                    }
-                    .col.subtotal {
-                      .price {
-                        color: @color-gray-strong;
-                        font-size: 14px;
-                        line-height: 16px;
-                        font-weight: bold;
-                      }
-                    }
-                  }
-                  .close-item-btn {
-                    padding-right: 15px;
-                    .actions-toolbar {
-                      .action-edit,
-                      .action-towishlist {
-                        display: none;
-                      }
-                      .action-delete {
-                        &:hover {
-                          color: #BABABA;
-                        }
-                        &:before {
-                          content: '\e616';
-                          font-size: 13px;
-                          font-weight: 600;
-                          color: #BABABA;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
             }
-          }
+            .columns {
+                .column.main {
+                    .cart-container {
+                        .form.form-cart {
+                            width: 85%;
+                            padding: 0;
+                            margin: 0 auto 150px;
+                            float: none;
+                            .form-footer-part {
+                                border-top: 1px solid #cccccc;
+                                text-align: right;
+                                p {
+                                    margin: 10px 0 25px;
+                                    color: #787878;
+                                    font-size: 13px;
+                                    line-height: 15px;
+                                }
+                                .total-price-only {
+                                    margin-top: 20px;
+                                    font-size: 13px;
+                                    line-height: 15px;
+                                    font-weight: 700;
+                                    span {
+                                        font-size: 18px;
+                                        line-height: 20px;
+                                        padding-left: 15px;
+                                    }
+                                }
+                            }
+                            .cart.main.actions {
+                                margin-top: 35px;
+                                .checkout-cart {
+                                    background-color: #33c0cb;
+                                    color: #FFFFFF;
+                                    text-decoration: none;
+                                    padding: 12px 40px;
+                                    font-weight: 400;
+                                    border: none;
+                                    border-radius: 62px;
+                                    margin-left: 5px;
+                                    span {
+                                        font-size: 12px;
+                                        line-height: 14px;
+                                    }
+                                }
+                                .continue-shopping {
+                                    border: 1px solid #33c0cb;
+                                    padding: 12px 27px;
+                                    border-radius: 62px;
+                                    color: #33c0cb;
+                                    text-decoration: none;
+                                    span {
+                                        font-size: 12px;
+                                        line-height: 14px;
+                                    }
+                                }
+                            }
+                            table {
+                                thead {
+                                    th {
+                                        font-size: 14px;
+                                        font-weight: normal;
+                                        line-height: 16px;
+                                        color: #585858;
+                                        &.price {
+                                            text-align: left;
+                                        }
+                                        &.qty {
+                                            text-align: center;
+                                        }
+                                        &.item {
+                                            span {
+                                                padding-left: 10px;
+                                            }
+                                        }
+                                    }
+                                }
+                                tbody {
+                                    border: none;
+                                    td {
+                                        vertical-align: inherit;
+                                        padding-top: 10px;
+                                        padding-bottom: 0px;
+                                    }
+                                    .col.qty {
+                                        text-align: center;
+                                        .field.qty {
+                                            position: relative;
+                                            .control.qty {
+                                                display: inline-block;
+                                                input {
+                                                    box-shadow: none;
+                                                    border-bottom-left-radius: 62px;
+                                                    border-top-left-radius: 62px;
+                                                    height: 40px;
+                                                    width: 52px;
+                                                    border-color: @color-border-gray;
+                                                }
+                                            }
+                                            .qty-add-remove {
+                                                position: inherit;
+                                                right: 5px;
+                                                height: 38px;
+                                                vertical-align: bottom;
+                                                display: inline-block;
+                                                border: 1px solid @color-border-gray;
+                                                border-bottom-right-radius: 62px;
+                                                border-top-right-radius: 62px;
+                                                padding: 0 5px;
+                                                span {
+                                                    display: block;
+                                                    cursor: pointer;
+                                                    font-size: 9px;
+                                                    margin: 7px 12px 5px 8px;
+                                                }
+                                                .icon-vectorupproduct:before {
+                                                    content: "\e917";
+                                                    color: #DBDBDB;
+                                                }
+                                                .icon-vectordownproduct:before {
+                                                    content: "\e916";
+                                                    color: #DBDBDB;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .col.item {
+                                        .product-item-photo {
+                                            img {
+                                                width: 125px !important;
+                                                height: 125px !important;
+                                            }
+                                        }
+                                        .product-item-details {
+                                            vertical-align: inherit;
+                                            padding-top: 15px;
+                                            .product-item-name {
+                                                a {
+                                                    font-size: 14px;
+                                                    line-height: 16px;
+                                                    color: #000000;
+                                                    font-weight: normal;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .col.price {
+                                        text-align: left;
+                                        color: @color-gray-strong;
+                                        .price {
+                                            font-weight: normal;
+                                            font-size: 14px;
+                                        }
+                                        .col.subtotal {
+                                            .price {
+                                                color: @color-gray-strong;
+                                                font-size: 14px;
+                                                line-height: 16px;
+                                                font-weight: bold;
+                                            }
+                                        }
+                                    }
+                                    .close-item-btn {
+                                        padding-right: 15px;
+                                        .actions-toolbar {
+                                            .action-edit,
+                                            .action-towishlist {
+                                                display: none;
+                                            }
+                                            .action-delete {
+                                                &:hover {
+                                                    color: #BABABA;
+                                                }
+                                                &:before {
+                                                    content: '\e616';
+                                                    font-size: 13px;
+                                                    font-weight: 600;
+                                                    color: #BABABA;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
-      }
     }
-  }
 
 }

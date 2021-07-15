@@ -3,723 +3,723 @@
 //  _____________________________________________
 
 & when (@media-common = true) {
-  //
-  //  Login/Register Modal
-  //  ---------------------------------------------
-  .login-register {
-    .modal-inner-wrap {
-      width: 35%;
-      .modal-content {
-        padding: 0 52px 40px;
-        .head-title {
-          text-align: center;
-          margin: 30px 0 65px;
-          &.register-modal-head {
-            h1::after {
-              right: 67px;
-            }
-          }
-          h1 {
-            font-size: 22px;
-            line-height: 26px;
-            font-weight: normal;
-            &::after {
-              content: '';
-              width: 28px;
-              height: 3px;
-              background-color: @color-red;
-              display: inline-block;
-              position: relative;
-              top: 20px;
-              right: 52px;
-            }
-          }
-        }
-        .form.create.account,
-        .form.password.forget {
-          min-width: 0;
-          width: 100%;
-        }
-        .field {
-          &.note {
-            font-size: 12px;
-            line-height: 25px;
-            color: @color-gray-text;
-          }
-          .control {
-            input {
-              padding: 10px 20px;
-              border: 1px solid @color-border-gray;
-              border-radius: 4px;
-              box-shadow: none;
-              font-size: 13px;
-              line-height: 28px;
-              color: @color-gray-text;
-              height: 50px;
-            }
-          }
-        }
-        .actions-toolbar {
-          text-align: center;
-          .secondary {
-            margin-bottom: 15px;
-            display: block;
-            .remind {
-              text-decoration: none;
-              color: @color-gray-text;
-              font-size: 12px;
-              line-height: 25px;
-            }
-            .goback {
-              margin-top: 20px;
-              color: #000000;
-              text-decoration: underline;
-              span {
-                font-size: 13px;
-                line-height: 28px;
-              }
-            }
-          }
-          .primary {
-            text-align: center;
-            display: block;
-            float: none;
-            .action.facebook {
-              margin-top: 10px;
-              background-color: #3B5998 !important;
-            }
-            .action.primary {
-              width: 100%;
-              background-color: @color-product-btn;
-              border-radius: 49px;
-              border: none;
-              padding: 10px 0;
-              span {
-                font-size: 13px;
-                line-height: 28px;
-                text-transform: uppercase;
-              }
-              &:hover {
-                background-color: @color-product-btn;
-              }
-            }
-          }
-          .third-action {
-            margin-top: 10px;
-            .signup {
-              color: #000000;
-              text-decoration: underline;
-              span {
-                font-size: 13px;
-                line-height: 28px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  //
-  //  Customer Account Address
-  //  ---------------------------------------------
-  .account {
-    .columns {
-      .sidebar.sidebar-main {
-        margin-top: 120px;
-        width: 25% !important;
-        .content.block-collapsible-nav-content {
-          background-color: #ffffff;
-          ul li {
-            text-transform: uppercase;
-            padding: 15px 0;
-            &.current {
-              &:after {
-                content: '';
-                position: relative;
-                top: 10px;
-                width: 33px;
-                height: 2px;
-                background-color: #FD4F48;
-                display: block;
-              }
-              strong, a{
-                border: none;
-                font-weight: normal;
-              }
-            }
-            strong, a {
-              color: #000;
-              padding: 0;
-              font-size: 14px;
-              line-height: 16px;
-              font-weight: normal;
-              &:hover {
-                background-color: #ffffff;
-              }
-            }
-          }
-        }
-      }
-      .column.main {
-        width: 75% !important;
-        .page-title-wrapper {
-          margin-bottom: 65px;
-          text-align: center;
-          h1 {
-            font-size: 20px;
-            line-height: 23px;
-            color: #000000;
-            &::after {
-              content: '';
-              width: 28px;
-              height: 3px;
-              background-color: @color-red;
-              display: inline-block;
-              position: relative;
-              top: 20px;
-              right: 50%;
-            }
-          }
-        }
-        .block-dashboard-info {
-          margin-bottom: 80px;
-          .box-welcome {
-            .box-title {
-              margin-bottom: 30px;
-              color: #000;
-              span {
-                font-size: 13px;
-                line-height: 15px;
-                font-weight: normal;
-              }
-            }
-            .box-content {
-              font-size: 13px;
-              line-height: 15px;
-              color: #696969;
-            }
-          }
-          .box-information {
-            .box-title {
-              margin-bottom: 30px;
-              line-height: 16px;
-              letter-spacing: 0.02em;
-              span {
-                font-size: 14px;
-              }
-            }
-            .box-content {
-              color: #4A4A4A;
-              font-size: 14px;
-              line-height: 16px;
-              margin-bottom: 30px;
-              .icon-emailaccount:before {
-                content: "\e901";
-                margin-right: 10px;
-              }
-              .icon-useraccount:before {
-                content: "\e913";
-                margin-right: 10px;
-              }
-            }
-          }
-          a {
-            color: #33C0CB;
-            text-decoration: none;
-            &:after {
-              border-color: #33C0CB;
-            }
-          }
-        }
-        .block-dashboard-addresses {
-          margin-bottom: 80px;
-          .block-title {
-            border: none;
-            margin-bottom: 10px;
-            strong {
-              font-weight: bold;
-              font-size: 14px;
-              text-transform: uppercase;
-              line-height: 16px;
-            }
-            a {
-              float: right;
-              margin-top: 5px;
-            }
-          }
-          .block-content {
-            border: 1px solid #E9E8E8;
-            padding: 0 20px;
-            .box {
-              padding: 20px 0;
-              &.box-billing-address {
-                border-right: 1px solid #E9E8E8;
-              }
-              .box-title span {
-                color: #000;
-                font-size: 13px;
-                line-height: 15px;
-                font-weight: normal;
-              }
-              .box-content {
-                address {
-                  color: #696969;
-                  line-height: 25px;
-                  font-size: 13px;
-                  a {
-                    color: #696969;
-                  }
-                }
-              }
-            }
-          }
-          a {
-            color: #33C0CB;
-            text-decoration: none;
-            &:after {
-              border-color: #33C0CB;
-            }
-          }
-        }
-        .block-dashboard-orders {
-          .block-title {
-            border: none;
-            margin-bottom: 30px;
-            strong {
-              font-weight: bold;
-              font-size: 14px;
-              line-height: 16px;
-            }
-            a {
-              float: right;
-              margin-top: 5px;
-            }
-          }
-          .block-content {
-            .table-order-items.recent {
-              text-align: center;
-              border: 1px solid #E9E8E8;
-              thead tr th {
-                text-align: center;
-                border: 1px solid #E9E8E8;
-                color: #000;
-                font-size: 12px;
-                line-height: 23px;
-                font-weight: normal;
-              }
-              tbody tr td {
-                border-right: 1px solid #E9E8E8;
-                border-bottom: none;
-                border-top: none;
-                border-left: none;
-                font-size: 13px;
-                line-height: 15px;
-                color: #565656;
-              }
-            }
-          }
-          a {
-            color: #33C0CB;
-            text-decoration: none;
-            &:after {
-              border-color: #33C0CB;
-            }
-          }
-        }
-        .block-addresses-default {
-          .block-content {
-            padding: 8px 20px 20px;
-            .box {
-              .box-title span {
-                color: #000;
-                font-size: 13px;
-                line-height: 15px;
-                font-weight: normal;
-              }
-              .box-content {
-                address {
-                  color: #696969;
-                  font-size: 13px;
-                  line-height: 25px;
-                  a {
-                    color: #696969;
-                    text-decoration: none;
-                  }
-                }
-              }
-              .box-actions {
-                margin-top: 10px;
-                a {
-                  color: #33C0CB;
-                  text-decoration: none;
-                }
-              }
-            }
-          }
-        }
-        .form-address-edit,
-        .form-edit-account {
-          padding: 8px 20px;
-          .legend {
-            border: none;
-            margin-bottom: 10px;
-            span {
-              font-size: 13px;
-              line-height: 15px;
-              color: #000;
-            }
-          }
-          .field {
-            margin-bottom: 10px;
-            &.choice {
-              margin: 24px 0;
-              label {
-                display: block;
-                position: relative;
-                padding-left: 30px;
-                margin-bottom: 12px;
-                cursor: pointer;
-                font-size: 14px;
-                line-height: 16px;
-                color: #4A4A4A;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
-                font-family: 'icomoon' !important;
-              }
-
-              /* Hide the browser's default checkbox */
-              label input {
-                position: absolute;
-                opacity: 0;
-                cursor: pointer;
-                height: 0;
-                width: 0;
-              }
-
-              /* Create a custom checkbox */
-              .checkmark {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 15px;
-                width: 15px;
-                border: 1px solid #D8D8D8;
-              }
-
-              /* When the checkbox is checked, add a blue background */
-              label input:checked ~ .checkmark {
-                border: 1px solid #D8D8D8;
-              }
-
-              /* Create the checkmark/indicator (hidden when not checked) */
-              .checkmark:after {
-                content: "\e900";
-                position: absolute;
-                display: none;
-                color: #33C0CB;
-              }
-
-              /* Show the checkmark when checked */
-              label input:checked ~ .checkmark:after {
-                display: block;
-              }
-
-              /* Style the checkmark/indicator */
-              label .checkmark:after {
-                bottom: 2px;
-                font-size: 25px;
-              }
-            }
-            .control {
-              select {
-                background: none;
-              }
-              input,
-              select {
-                padding: 6px 17px;
-                height: 40px;
-                font-size: 13px;
-                color: #252525;
-                border-color: #DDDDDD;
-                box-shadow: none;
-                &:focus {
-                  border-color: @color-product-btn;
-                }
-              }
-            }
-            .label {
-              margin: 0;
-              font-size: 12px;
-              color: #878787;
-              line-height: 25px;
-              font-weight: normal;
-              &:after {
-                display: none;
-              }
-            }
-          }
-          .actions-toolbar {
-            margin-top: 60px;
-            .primary {
-              .save.primary {
-                border: none;
-                background-color: @color-product-btn;
-                border-radius: 62px;
-                font-weight: normal;
-                font-size: 13px;
-                line-height: 15px;
-                padding: 10px 50px;
-              }
-            }
-          }
-        }
-        .order-details-items.ordered {
-          padding: 0;
-          border: none;
-          margin-bottom: 55px;
-          .table-wrapper.order-items {
-            margin: 0;
-            border: none;
-            table {
-              thead tr th {
-                border: 1px solid #E9E8E8;
-                font-size: 12px;
-                line-height: 23px;
-                color: #000;
-                font-weight: normal;
-                &.sku, &.price, &.qty {
-                  text-align: center;
-                }
-                &.name {
-                  padding-left: 18px;
-                  padding-right: 0;
-                }
-                &.subtotal {
-                  padding-right: 25px;
-                  padding-left: 0;
-                }
-              }
-              tbody {
-                border-bottom: 1px solid #E9E8E8;
-                tr td {
-                  border-right: 1px solid #E9E8E8;
-                  border-left: 1px solid #E9E8E8;
-                  padding-bottom: 15px;
-                  color: #444444;
-                  &.name {
-                    strong {
-                      color: #5B5B5B;
-                      font-size: 13px;
-                      line-height: 15px;
-                      padding-left: 18px;
-                      padding-right: 0;
-                    }
-                  }
-                  &.subtotal {
-                    padding-left: 0px;
-                    padding-right: 25px;
-                    span.price {
-                      font-size: 13px;
-                      font-weight: normal;
-                      line-height: 15px;
-                    }
-                  }
-                  &.sku, &.price, &.qty {
-                    font-size: 13px;
-                    line-height: 15px;
+    //
+    //  Login/Register Modal
+    //  ---------------------------------------------
+    .login-register {
+        .modal-inner-wrap {
+            width: 35%;
+            .modal-content {
+                padding: 0 52px 40px;
+                .head-title {
                     text-align: center;
-                    span.price {
-                      font-size: 13px;
-                      font-weight: normal;
-                      line-height: 15px;
+                    margin: 30px 0 65px;
+                    &.register-modal-head {
+                        h1::after {
+                            right: 67px;
+                        }
                     }
-                  }
-                }
-              }
-              tfoot {
-                background: #ffffff;
-                tr {
-                  th {
-                    text-align: left;
-                    padding-left: 18px;
-                  }
-                  td {
-                    background: #FFFFFF;
-                    text-align: right;
-                  }
-                  &.subtotal, &.shipping {
-                    border-bottom: 1px solid #E9E8E8;
-                    th {
-                      color: #000;
-                      font-size: 13px;
-                      line-height: 25px;
+                    h1 {
+                        font-size: 22px;
+                        line-height: 26px;
+                        font-weight: normal;
+                        &::after {
+                            content: '';
+                            width: 28px;
+                            height: 3px;
+                            background-color: @color-red;
+                            display: inline-block;
+                            position: relative;
+                            top: 20px;
+                            right: 52px;
+                        }
                     }
-                    td {
-                      font-size: 13px;
-                      line-height: 15px;
-                      padding-right: 25px;
+                }
+                .form.create.account,
+                .form.password.forget {
+                    min-width: 0;
+                    width: 100%;
+                }
+                .field {
+                    &.note {
+                        font-size: 12px;
+                        line-height: 25px;
+                        color: @color-gray-text;
                     }
-                  }
-                  &.grand_total {
-                    border-top: 1px solid #E9E8E8;
-                    th {
-                      color: #000;
-                      font-size: 15px;
-                      line-height: 29px;
-                      font-weight: bold;
+                    .control {
+                        input {
+                            padding: 10px 20px;
+                            border: 1px solid @color-border-gray;
+                            border-radius: 4px;
+                            box-shadow: none;
+                            font-size: 13px;
+                            line-height: 28px;
+                            color: @color-gray-text;
+                            height: 50px;
+                        }
                     }
-                    td {
-                      color: #444444;
-                      font-size: 16px;
-                      line-height: 19px;
-                      font-weight: bold;
-                      padding-right: 25px;
+                }
+                .actions-toolbar {
+                    text-align: center;
+                    .secondary {
+                        margin-bottom: 15px;
+                        display: block;
+                        .remind {
+                            text-decoration: none;
+                            color: @color-gray-text;
+                            font-size: 12px;
+                            line-height: 25px;
+                        }
+                        .goback {
+                            margin-top: 20px;
+                            color: #000000;
+                            text-decoration: underline;
+                            span {
+                                font-size: 13px;
+                                line-height: 28px;
+                            }
+                        }
                     }
-                  }
+                    .primary {
+                        text-align: center;
+                        display: block;
+                        float: none;
+                        .action.facebook {
+                            margin-top: 10px;
+                            background-color: #3B5998 !important;
+                        }
+                        .action.primary {
+                            width: 100%;
+                            background-color: @color-product-btn;
+                            border-radius: 49px;
+                            border: none;
+                            padding: 10px 0;
+                            span {
+                                font-size: 13px;
+                                line-height: 28px;
+                                text-transform: uppercase;
+                            }
+                            &:hover {
+                                background-color: @color-product-btn;
+                            }
+                        }
+                    }
+                    .third-action {
+                        margin-top: 10px;
+                        .signup {
+                            color: #000000;
+                            text-decoration: underline;
+                            span {
+                                font-size: 13px;
+                                line-height: 28px;
+                            }
+                        }
+                    }
                 }
-              }
             }
-          }
         }
-        .block.block-order-details-view {
-          .block-title {
-            padding-bottom: 5px;
-            margin-bottom: 30px;
-            strong {
-              color: #000;
-              font-size: 14px;
-              line-height: 27px;
-              font-weight: bold;
-            }
-          }
-          .block-content {
-            .box {
-              clear: left !important;
-              &:nth-child(2) {
-                clear: unset !important;
-              }
-              &.box-order-billing-method {
-                clear: none !important;
-              }
-              width: 45% !important;
-              padding: 0 20px 0;
-              .box-title {
-                margin-bottom: 15px;
-                span {
-                  color: #000;
-                  font-size: 13px;
-                  font-weight: normal;
-                  line-height: 15px;
-                }
-              }
-              .box-content {
-                color: #696969;
-                font-size: 13px;
-                line-height: 30px;
-                a {
-                  color: #696969;
-                  text-decoration: none;
-                }
-              }
-            }
-          }
-        }
-        .table-wrapper.orders-history {
-          border: none;
-          margin-bottom: 230px;
-          table {
-            border: 1px solid #E9E8E8;
-            thead tr th {
-              border: 1px solid #E9E8E8;
-              text-align: center;
-              font-size: 12px;
-              line-height: 23px;
-              font-weight: normal;
-              color: #000;
-            }
-            tbody tr {
-              text-align: center;
-              td {
-                border-right: 1px solid #E9E8E8;
-                border-top: none;
-                color: #565656;
-                font-size: 13px;
-                line-height: 15px;
-                a {
-                  color: @color-product-btn;
-                  text-decoration: none;
-                }
-              }
-            }
-          }
-        }
-        .order-products-toolbar.toolbar.bottom {
-          margin-bottom: 100px;
-          .pages {
-            text-align: right;
-            .item {
-              &.pages-item-next,
-              &.pages-item-previous {
-                a {
-                  border: none;
-                  margin: 0;
-                  &:before {
-                    font-size: 12px;
-                    line-height: 16px;
-                    font-weight: normal;
-                    color: #000;
-                    vertical-align: text-top;
-                  }
-                }
-              }
-              &.current {
-                strong {
-                  background-color: @color-product-btn;
-                  border-radius: 100%;
-                  padding: 7px 17px;
-                  span {
-                    font-size: 14px;
-                    line-height: 16px;
-                    font-weight: normal;
-                    color: #ffffff;
-                  }
-                }
-              }
-              strong, a {
-                background-color: #EEEEEE;
-                border-radius: 100%;
-                padding: 7px 17px;
-                span {
-                  font-size: 14px;
-                  line-height: 16px;
-                  font-weight: normal;
-                  color: #000;
-                }
-              }
-            }
-          }
-        }
-        .actions-toolbar {
-          margin-top: 35px;
-          .action.primary.add {
-            border: 1px solid #000000;
-            border-radius: 62px;
-            background-color: #ffffff;
-            padding: 10px 32px;
-            margin-left: 20px;
-            span {
-              font-size: 12px;
-              line-height: 14px;
-              color: #000000;
-              font-weight: normal;
-            }
-          }
-        }
-        //sa texapoxel
-      }
     }
-  }
+
+    //
+    //  Customer Account Address
+    //  ---------------------------------------------
+    .account {
+        .columns {
+            .sidebar.sidebar-main {
+                margin-top: 120px;
+                width: 25% !important;
+                .content.block-collapsible-nav-content {
+                    background-color: #ffffff;
+                    ul li {
+                        text-transform: uppercase;
+                        padding: 15px 0;
+                        &.current {
+                            &:after {
+                                content: '';
+                                position: relative;
+                                top: 10px;
+                                width: 33px;
+                                height: 2px;
+                                background-color: #FD4F48;
+                                display: block;
+                            }
+                            strong, a {
+                                border: none;
+                                font-weight: normal;
+                            }
+                        }
+                        strong, a {
+                            color: #000;
+                            padding: 0;
+                            font-size: 14px;
+                            line-height: 16px;
+                            font-weight: normal;
+                            &:hover {
+                                background-color: #ffffff;
+                            }
+                        }
+                    }
+                }
+            }
+            .column.main {
+                width: 75% !important;
+                .page-title-wrapper {
+                    margin-bottom: 65px;
+                    text-align: center;
+                    h1 {
+                        font-size: 20px;
+                        line-height: 23px;
+                        color: #000000;
+                        &::after {
+                            content: '';
+                            width: 28px;
+                            height: 3px;
+                            background-color: @color-red;
+                            display: inline-block;
+                            position: relative;
+                            top: 20px;
+                            right: 50%;
+                        }
+                    }
+                }
+                .block-dashboard-info {
+                    margin-bottom: 80px;
+                    .box-welcome {
+                        .box-title {
+                            margin-bottom: 30px;
+                            color: #000;
+                            span {
+                                font-size: 13px;
+                                line-height: 15px;
+                                font-weight: normal;
+                            }
+                        }
+                        .box-content {
+                            font-size: 13px;
+                            line-height: 15px;
+                            color: #696969;
+                        }
+                    }
+                    .box-information {
+                        .box-title {
+                            margin-bottom: 30px;
+                            line-height: 16px;
+                            letter-spacing: 0.02em;
+                            span {
+                                font-size: 14px;
+                            }
+                        }
+                        .box-content {
+                            color: #4A4A4A;
+                            font-size: 14px;
+                            line-height: 16px;
+                            margin-bottom: 30px;
+                            .icon-emailaccount:before {
+                                content: "\e901";
+                                margin-right: 10px;
+                            }
+                            .icon-useraccount:before {
+                                content: "\e913";
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                    a {
+                        color: #33C0CB;
+                        text-decoration: none;
+                        &:after {
+                            border-color: #33C0CB;
+                        }
+                    }
+                }
+                .block-dashboard-addresses {
+                    margin-bottom: 80px;
+                    .block-title {
+                        border: none;
+                        margin-bottom: 10px;
+                        strong {
+                            font-weight: bold;
+                            font-size: 14px;
+                            text-transform: uppercase;
+                            line-height: 16px;
+                        }
+                        a {
+                            float: right;
+                            margin-top: 5px;
+                        }
+                    }
+                    .block-content {
+                        border: 1px solid #E9E8E8;
+                        padding: 0 20px;
+                        .box {
+                            padding: 20px 0;
+                            &.box-billing-address {
+                                border-right: 1px solid #E9E8E8;
+                            }
+                            .box-title span {
+                                color: #000;
+                                font-size: 13px;
+                                line-height: 15px;
+                                font-weight: normal;
+                            }
+                            .box-content {
+                                address {
+                                    color: #696969;
+                                    line-height: 25px;
+                                    font-size: 13px;
+                                    a {
+                                        color: #696969;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    a {
+                        color: #33C0CB;
+                        text-decoration: none;
+                        &:after {
+                            border-color: #33C0CB;
+                        }
+                    }
+                }
+                .block-dashboard-orders {
+                    .block-title {
+                        border: none;
+                        margin-bottom: 30px;
+                        strong {
+                            font-weight: bold;
+                            font-size: 14px;
+                            line-height: 16px;
+                        }
+                        a {
+                            float: right;
+                            margin-top: 5px;
+                        }
+                    }
+                    .block-content {
+                        .table-order-items.recent {
+                            text-align: center;
+                            border: 1px solid #E9E8E8;
+                            thead tr th {
+                                text-align: center;
+                                border: 1px solid #E9E8E8;
+                                color: #000;
+                                font-size: 12px;
+                                line-height: 23px;
+                                font-weight: normal;
+                            }
+                            tbody tr td {
+                                border-right: 1px solid #E9E8E8;
+                                border-bottom: none;
+                                border-top: none;
+                                border-left: none;
+                                font-size: 13px;
+                                line-height: 15px;
+                                color: #565656;
+                            }
+                        }
+                    }
+                    a {
+                        color: #33C0CB;
+                        text-decoration: none;
+                        &:after {
+                            border-color: #33C0CB;
+                        }
+                    }
+                }
+                .block-addresses-default {
+                    .block-content {
+                        padding: 8px 20px 20px;
+                        .box {
+                            .box-title span {
+                                color: #000;
+                                font-size: 13px;
+                                line-height: 15px;
+                                font-weight: normal;
+                            }
+                            .box-content {
+                                address {
+                                    color: #696969;
+                                    font-size: 13px;
+                                    line-height: 25px;
+                                    a {
+                                        color: #696969;
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                            .box-actions {
+                                margin-top: 10px;
+                                a {
+                                    color: #33C0CB;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                .form-address-edit,
+                .form-edit-account {
+                    padding: 8px 20px;
+                    .legend {
+                        border: none;
+                        margin-bottom: 10px;
+                        span {
+                            font-size: 13px;
+                            line-height: 15px;
+                            color: #000;
+                        }
+                    }
+                    .field {
+                        margin-bottom: 10px;
+                        &.choice {
+                            margin: 24px 0;
+                            label {
+                                display: block;
+                                position: relative;
+                                padding-left: 30px;
+                                margin-bottom: 12px;
+                                cursor: pointer;
+                                font-size: 14px;
+                                line-height: 16px;
+                                color: #4A4A4A;
+                                -webkit-user-select: none;
+                                -moz-user-select: none;
+                                -ms-user-select: none;
+                                user-select: none;
+                                font-family: 'icomoon' !important;
+                            }
+
+                            /* Hide the browser's default checkbox */
+                            label input {
+                                position: absolute;
+                                opacity: 0;
+                                cursor: pointer;
+                                height: 0;
+                                width: 0;
+                            }
+
+                            /* Create a custom checkbox */
+                            .checkmark {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                height: 15px;
+                                width: 15px;
+                                border: 1px solid #D8D8D8;
+                            }
+
+                            /* When the checkbox is checked, add a blue background */
+                            label input:checked ~ .checkmark {
+                                border: 1px solid #D8D8D8;
+                            }
+
+                            /* Create the checkmark/indicator (hidden when not checked) */
+                            .checkmark:after {
+                                content: "\e900";
+                                position: absolute;
+                                display: none;
+                                color: #33C0CB;
+                            }
+
+                            /* Show the checkmark when checked */
+                            label input:checked ~ .checkmark:after {
+                                display: block;
+                            }
+
+                            /* Style the checkmark/indicator */
+                            label .checkmark:after {
+                                bottom: 2px;
+                                font-size: 25px;
+                            }
+                        }
+                        .control {
+                            select {
+                                background: none;
+                            }
+                            input,
+                            select {
+                                padding: 6px 17px;
+                                height: 40px;
+                                font-size: 13px;
+                                color: #252525;
+                                border-color: #DDDDDD;
+                                box-shadow: none;
+                                &:focus {
+                                    border-color: @color-product-btn;
+                                }
+                            }
+                        }
+                        .label {
+                            margin: 0;
+                            font-size: 12px;
+                            color: #878787;
+                            line-height: 25px;
+                            font-weight: normal;
+                            &:after {
+                                display: none;
+                            }
+                        }
+                    }
+                    .actions-toolbar {
+                        margin-top: 60px;
+                        .primary {
+                            .save.primary {
+                                border: none;
+                                background-color: @color-product-btn;
+                                border-radius: 62px;
+                                font-weight: normal;
+                                font-size: 13px;
+                                line-height: 15px;
+                                padding: 10px 50px;
+                            }
+                        }
+                    }
+                }
+                .order-details-items.ordered {
+                    padding: 0;
+                    border: none;
+                    margin-bottom: 55px;
+                    .table-wrapper.order-items {
+                        margin: 0;
+                        border: none;
+                        table {
+                            thead tr th {
+                                border: 1px solid #E9E8E8;
+                                font-size: 12px;
+                                line-height: 23px;
+                                color: #000;
+                                font-weight: normal;
+                                &.sku, &.price, &.qty {
+                                    text-align: center;
+                                }
+                                &.name {
+                                    padding-left: 18px;
+                                    padding-right: 0;
+                                }
+                                &.subtotal {
+                                    padding-right: 25px;
+                                    padding-left: 0;
+                                }
+                            }
+                            tbody {
+                                border-bottom: 1px solid #E9E8E8;
+                                tr td {
+                                    border-right: 1px solid #E9E8E8;
+                                    border-left: 1px solid #E9E8E8;
+                                    padding-bottom: 15px;
+                                    color: #444444;
+                                    &.name {
+                                        strong {
+                                            color: #5B5B5B;
+                                            font-size: 13px;
+                                            line-height: 15px;
+                                            padding-left: 18px;
+                                            padding-right: 0;
+                                        }
+                                    }
+                                    &.subtotal {
+                                        padding-left: 0px;
+                                        padding-right: 25px;
+                                        span.price {
+                                            font-size: 13px;
+                                            font-weight: normal;
+                                            line-height: 15px;
+                                        }
+                                    }
+                                    &.sku, &.price, &.qty {
+                                        font-size: 13px;
+                                        line-height: 15px;
+                                        text-align: center;
+                                        span.price {
+                                            font-size: 13px;
+                                            font-weight: normal;
+                                            line-height: 15px;
+                                        }
+                                    }
+                                }
+                            }
+                            tfoot {
+                                background: #ffffff;
+                                tr {
+                                    th {
+                                        text-align: left;
+                                        padding-left: 18px;
+                                    }
+                                    td {
+                                        background: #FFFFFF;
+                                        text-align: right;
+                                    }
+                                    &.subtotal, &.shipping {
+                                        border-bottom: 1px solid #E9E8E8;
+                                        th {
+                                            color: #000;
+                                            font-size: 13px;
+                                            line-height: 25px;
+                                        }
+                                        td {
+                                            font-size: 13px;
+                                            line-height: 15px;
+                                            padding-right: 25px;
+                                        }
+                                    }
+                                    &.grand_total {
+                                        border-top: 1px solid #E9E8E8;
+                                        th {
+                                            color: #000;
+                                            font-size: 15px;
+                                            line-height: 29px;
+                                            font-weight: bold;
+                                        }
+                                        td {
+                                            color: #444444;
+                                            font-size: 16px;
+                                            line-height: 19px;
+                                            font-weight: bold;
+                                            padding-right: 25px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .block.block-order-details-view {
+                    .block-title {
+                        padding-bottom: 5px;
+                        margin-bottom: 30px;
+                        strong {
+                            color: #000;
+                            font-size: 14px;
+                            line-height: 27px;
+                            font-weight: bold;
+                        }
+                    }
+                    .block-content {
+                        .box {
+                            clear: left !important;
+                            &:nth-child(2) {
+                                clear: unset !important;
+                            }
+                            &.box-order-billing-method {
+                                clear: none !important;
+                            }
+                            width: 45% !important;
+                            padding: 0 20px 0;
+                            .box-title {
+                                margin-bottom: 15px;
+                                span {
+                                    color: #000;
+                                    font-size: 13px;
+                                    font-weight: normal;
+                                    line-height: 15px;
+                                }
+                            }
+                            .box-content {
+                                color: #696969;
+                                font-size: 13px;
+                                line-height: 30px;
+                                a {
+                                    color: #696969;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                .table-wrapper.orders-history {
+                    border: none;
+                    margin-bottom: 230px;
+                    table {
+                        border: 1px solid #E9E8E8;
+                        thead tr th {
+                            border: 1px solid #E9E8E8;
+                            text-align: center;
+                            font-size: 12px;
+                            line-height: 23px;
+                            font-weight: normal;
+                            color: #000;
+                        }
+                        tbody tr {
+                            text-align: center;
+                            td {
+                                border-right: 1px solid #E9E8E8;
+                                border-top: none;
+                                color: #565656;
+                                font-size: 13px;
+                                line-height: 15px;
+                                a {
+                                    color: @color-product-btn;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                .order-products-toolbar.toolbar.bottom {
+                    margin-bottom: 100px;
+                    .pages {
+                        text-align: right;
+                        .item {
+                            &.pages-item-next,
+                            &.pages-item-previous {
+                                a {
+                                    border: none;
+                                    margin: 0;
+                                    &:before {
+                                        font-size: 12px;
+                                        line-height: 16px;
+                                        font-weight: normal;
+                                        color: #000;
+                                        vertical-align: text-top;
+                                    }
+                                }
+                            }
+                            &.current {
+                                strong {
+                                    background-color: @color-product-btn;
+                                    border-radius: 100%;
+                                    padding: 7px 17px;
+                                    span {
+                                        font-size: 14px;
+                                        line-height: 16px;
+                                        font-weight: normal;
+                                        color: #ffffff;
+                                    }
+                                }
+                            }
+                            strong, a {
+                                background-color: #EEEEEE;
+                                border-radius: 100%;
+                                padding: 7px 17px;
+                                span {
+                                    font-size: 14px;
+                                    line-height: 16px;
+                                    font-weight: normal;
+                                    color: #000;
+                                }
+                            }
+                        }
+                    }
+                }
+                .actions-toolbar {
+                    margin-top: 35px;
+                    .action.primary.add {
+                        border: 1px solid #000000;
+                        border-radius: 62px;
+                        background-color: #ffffff;
+                        padding: 10px 32px;
+                        margin-left: 20px;
+                        span {
+                            font-size: 12px;
+                            line-height: 14px;
+                            color: #000000;
+                            font-weight: normal;
+                        }
+                    }
+                }
+                //sa texapoxel
+            }
+        }
+    }
 }
