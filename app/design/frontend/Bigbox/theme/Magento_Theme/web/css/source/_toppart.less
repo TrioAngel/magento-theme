@@ -1,7 +1,7 @@
 .block-search {
     position: absolute;
     display: none;
-    z-index: 100;
+    z-index: 10;
     right: 15%;
     width: 395px;
     .block-content {
@@ -68,38 +68,108 @@
     .navigation {
         background-color: @color-white-color;
         margin-top: 10px;
-        ul.level0 {
-            top: 70px !important;
-            ul.level1 {
-                top: 100px !important;
-            }
+        text-align: center;
+        .menu > ul > li {
+            float: none;
+            display: inline-block;
         }
-        ul {
-            text-align: center;
-            li {
-                a {
-                    color: @color-hover-black !important;
-                    font-size: 13px;
-                    line-height: 15px;
-                    font-weight: normal;
-                }
-                a:hover {
-                    color: @color-red !important;;
+        li {
+            > ul {
+                text-align: left;
+                margin-top: 20px;
+            }
+            a {
+                color: @color-hover-black !important;
+                font-size: 13px;
+                line-height: 15px;
+                font-weight: normal;
+                padding: 20px 35px;
+            }
+            a:hover {
+                color: @color-red !important;;
+            }
+            &:hover {
+                background-color: @color-white-color;
+            }
+            &:not(.last-li) {
+                > ul {
+                    padding: 30px 35px;
+                    width: 20%;
+                    left: unset;
+                    background-color: @color-white-color;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+                    li {
+                        a {
+                            border: none;
+                            margin: 0 0 15px;
+                            padding: 0;
+                        }
+                        &.parent {
+                            > a {
+                                position: relative;
+                                &:after {
+                                    content: '\e916';
+                                    color: #000;
+                                    position: absolute;
+                                    font-family: 'icomoon' !important;
+                                    left: 200px;
+                                    top: 0;
+                                    font-size: 8px;
+                                    transform: rotate(-90deg);
+                                }
+                            }
+                            ul {
+                                display: none;
+                                position: absolute;
+                                left: 100%;
+                                width: 100%;
+                                bottom: 60px;
+                                li {
+                                    padding: 0;
+                                }
+                            }
+                            &:hover > ul {
+                                display: block;
+                            }
+                        }
+                    }
                 }
             }
-            ul {
-                padding: 20px 10px 30px 20px !important;
-                text-align: left !important;
-                border: none !important;
-                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25) !important;
-                a.ui-state-focus {
-                    background-color: @color-white-color !important;
-                }
-                li.parent {
-                    &:before {
-                        content: '>' !important;
-                        float: right !important;
-                        margin-top: 5px !important;
+            &.last-li {
+                > ul {
+                    padding: 23px 17px;
+                    background-color: @color-white-color;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+                    .column_mega_menu4 {
+                        &:first-child {
+                            margin-left: 21px;
+                        }
+                        margin: 23px 20px 0 0;
+                        width: 14%;
+                        &.last {
+                            margin-right: 10px;
+                        }
+                        > a {
+                            color: #000;
+                            font-size: 13px;
+                            line-height: 15px;
+                            padding: 0;
+                            margin: 0 0 15px;
+                            border: none;
+                        }
+                        ul.submenu {
+                            margin: 0 !important;
+                            padding: 0 !important;
+                            box-shadow: none !important;
+                            width: 100% !important;
+                            li {
+                                a {
+                                    margin: 0;
+                                    padding: 0;
+                                    color: #949494 !important;
+                                }
+                            }
+                        }
                     }
                 }
             }
