@@ -14,10 +14,10 @@
         <div class="col-column" data-bind="scope: 'customer'">
             <?= $this->getChildHtml("header_3") ?>
             <!-- ko if: customer().fullname  -->
-            <p><a href="<?= $this->getUrl('customer/account') ?>" id="logout"><?= __('acccount') ?></a> / <a href="<?= $this->getUrl('customer/account/logout') ?>" id="logout"><?= __('logout') ?></a></p>
+            <p style="display: none" data-bind="visible: true"><a href="<?= $this->getUrl('customer/account') ?>" id="logout"><?= __('acccount') ?></a> / <a href="<?= $this->getUrl('customer/account/logout') ?>" id="logout"><?= __('logout') ?></a></p>
             <!-- /ko -->
             <!-- ko ifnot: customer().fullname  -->
-            <p><a href="#" id="register"><?= __('register ') ?></a> / <a href="#" id="loginmodal"><?= __('login ') ?></a></p>
+            <p style="display: none" data-bind="visible: true"><a href="#" id="register"><?= __('register ') ?></a> / <a href="#" id="loginmodal"><?= __('login ') ?></a></p>
             <!-- /ko -->
         </div>
         <div class="col-column last-one">

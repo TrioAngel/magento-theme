@@ -91,7 +91,7 @@
             &:hover {
                 background-color: @color-white-color;
             }
-            &:not(.last-li) {
+            &.mega-disable {
                 > ul {
                     padding: 30px 35px;
                     width: 20%;
@@ -103,10 +103,12 @@
                             border: none;
                             margin: 0 0 15px;
                             padding: 0;
+                            width: max-content;
                         }
                         &.parent {
                             > a {
                                 position: relative;
+                                width: max-content;
                                 &:after {
                                     content: '\e916';
                                     color: #000;
@@ -119,6 +121,9 @@
                                 }
                             }
                             ul {
+                                padding: 30px 35px;
+                                background-color: @color-white-color;
+                                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
                                 display: none;
                                 position: absolute;
                                 left: 100%;
@@ -135,20 +140,48 @@
                     }
                 }
             }
-            &.last-li {
+            &.mega-enable {
+                .right-block {
+                    padding-right: 32%;
+                    min-height: 280px;
+                    .rightstatic {
+                        position: absolute;
+                        left: 69%;
+                        max-height: 230px;
+                        p {
+                            margin: 0;
+                            padding: 0;
+                        }
+                        img {
+                            max-height: 230px;
+                        }
+                    }
+                }
+                .left-block {
+                    padding-left: 32%;
+                    min-height: 280px;
+                    .leftstatic {
+                        margin: 0;
+                        position: absolute;
+                        right: 69%;
+                        max-height: 230px;
+                        p {
+                            margin: 0;
+                            padding: 0;
+                        }
+                        img {
+                            max-height: 230px;
+                        }
+                    }
+                }
                 > ul {
                     padding: 23px 17px;
                     background-color: @color-white-color;
                     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-                    .column_mega_menu4 {
-                        &:first-child {
-                            margin-left: 21px;
-                        }
-                        margin: 23px 20px 0 0;
-                        width: 14%;
-                        &.last {
-                            margin-right: 10px;
-                        }
+                    .column_mega_menu4,
+                    .column_mega_menu3,
+                    .column_mega_menu2,
+                    .column_mega_menu1 {
                         > a {
                             color: #000;
                             font-size: 13px;
@@ -156,6 +189,7 @@
                             padding: 0;
                             margin: 0 0 15px;
                             border: none;
+                            width: max-content;
                         }
                         ul.submenu {
                             margin: 0 !important;
@@ -167,6 +201,7 @@
                                     margin: 0;
                                     padding: 0;
                                     color: #949494 !important;
+                                    width: max-content;
                                 }
                             }
                         }
