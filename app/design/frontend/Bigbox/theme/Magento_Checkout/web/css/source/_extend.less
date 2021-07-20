@@ -218,4 +218,82 @@
         }
     }
 
+    //
+    //  Checkout Success
+    //  ---------------------------------------------
+    .checkout-onepage-success {
+        .page-title-wrapper {
+            margin-bottom: 80px;
+            text-align: center;
+            h1 {
+                font-size: 20px;
+                line-height: 23px;
+                color: #000000;
+                &::after {
+                    content: '';
+                    width: 28px;
+                    height: 3px;
+                    background-color: @color-red;
+                    display: inline-block;
+                    position: relative;
+                    top: 20px;
+                    right: 50%;
+                }
+            }
+        }
+        .checkout-success {
+            text-align: center;
+            .success-check {
+                margin: 30px auto 45px;
+                height: 50px;
+                width: 50px;
+                border-radius: 100%;
+                background-color: #6AC259;
+                .icon-doneblue:before {
+                    content: "\e900";
+                    color: #ffffff;
+                    font-size: 24px;
+                    position: relative;
+                    top: 25%;
+                }
+            }
+            .thanks {
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 19px;
+                color: #000;
+            }
+            p {
+                font-size: 14px;
+                line-height: 16px;
+                color: #6B6B6B;
+                a {
+                    color: #6B6B6B;
+                    text-decoration: none;
+                    strong {
+                        font-weight: normal;
+                    }
+                }
+            }
+
+            .actions-toolbar {
+                margin-top: 55px;
+                text-align: center;
+                .primary {
+                    float: none;
+                    .action.primary {
+                        width: 100%;
+                        background-color: @color-product-btn;
+                        border-radius: 62px;
+                        border: none;
+                        padding: 15px 32px;
+                        span {
+                            font-size: 13px;
+                            line-height: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
