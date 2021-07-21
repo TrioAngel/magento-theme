@@ -9,6 +9,8 @@
 
     <preference for="Magento\Translation\Model\Json\PreProcessor" type="Change\Module\Model\Json\PreProcessor" />
 
+    <preference for="Magento\Checkout\Controller\Onepage\Success" type="Change\Module\Controller\Onepage\Success" />
+
 
     <virtualType name="ChangeGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
         <arguments>

@@ -11,17 +11,17 @@ namespace Change\Module\Plugin;
 
 class Cart
 {
-    public function aroundAddProduct
-    (
-        \Magento\Checkout\Model\Cart $cart,
-        \Closure $proceed,
-        $productInfo,
-        $requestInfo = null
-    )
-    {
-
-        $requestInfo['qty'] = 5;
-        $result = $proceed($productInfo, $requestInfo);
-        return $result;
-    }
+//    public function aroundAddProduct
+//    (
+//        \Magento\Checkout\Model\Cart $cart,
+//        \Closure $proceed,
+//        $productInfo,
+//        $requestInfo = null
+//    )
+//    {
+//
+//        $requestInfo['qty'] = 5;
+//        $result = $proceed($productInfo, $requestInfo);
+//        return $result;
+//    }
 }

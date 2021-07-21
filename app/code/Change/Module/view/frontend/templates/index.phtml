@@ -1,16 +1,11 @@
 <?php
-$all = $this->getAll();
+//$all = $this->getAll();
+$productCollection = $block->getProductCollection();
+$orders = $block->getOrderCollection();
+//echo $productCollection->getSelect();
+
+foreach ($orders as $item) {
+    var_dump($item->getSku());
+}
 
 ?>
-
-<h1>Change Module Name List</h1>
-
-<ul class="test">
-    <?php foreach ($all as $item) : ?>
-        <li><?= $item->getData('name') ?></li>
-    <?php endforeach; ?>
-</ul>
-
-
-<p class="config-value">Get enable value and display text value: <?= $this->getConfigsValues() ?></p>
-
