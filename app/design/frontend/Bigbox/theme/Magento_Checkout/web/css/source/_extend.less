@@ -301,6 +301,25 @@
     //  Checkout OnePageCheckout
     //  ---------------------------------------------
     .onestepcheckout-index-index {
+        .page-title-wrapper {
+            margin-bottom: 80px;
+            text-align: center;
+            h1 {
+                font-size: 20px;
+                line-height: 23px;
+                color: #000000;
+                &::after {
+                    content: '';
+                    width: 28px;
+                    height: 3px;
+                    background-color: @color-red;
+                    display: inline-block;
+                    position: relative;
+                    top: 20px;
+                    right: 50%;
+                }
+            }
+        }
         .checkout-container {
             .aw-onestep.aw-onestep-sidebar {
                 border: none;

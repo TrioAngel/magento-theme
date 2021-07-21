@@ -7,5 +7,6 @@
         <referenceBlock name="catalog.compare.link" remove="false" />
         <referenceBlock name="catalog.topnav" remove="false"/>
         <referenceContainer name="footer-container"  remove="false"/>
+        <referenceBlock name="page.main.title" remove="false"/>
     </body>
 </page>
