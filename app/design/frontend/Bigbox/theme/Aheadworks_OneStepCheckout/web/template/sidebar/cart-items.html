@@ -1,0 +1,21 @@
+<div class="aw-onestep-sidebar-block aw-sidebar-product-list">
+    <div class="aw-onestep-sidebar-block_title" data-role="title">
+        <span translate="'My Label'"></span>
+    </div>
+    <div class="aw-onestep-sidebar-block_content" data-role="content">
+        <div class="minicart-items-wrapper">
+            <!-- ko foreach: items() -->
+            <!-- ko foreach: $parent.elems() -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+            <!-- /ko -->
+            <!-- /ko -->
+        </div>
+    </div>
+    <div class="actions-toolbar" if="maxCartItemsToDisplay < getCartLineItemsCount()">
+        <div class="secondary">
+            <a class="action viewcart" data-bind="attr: {href: cartUrl}">
+                <span data-bind="i18n: 'View and Edit Cart'"></span>
+            </a>
+        </div>
+    </div>
+</div>
