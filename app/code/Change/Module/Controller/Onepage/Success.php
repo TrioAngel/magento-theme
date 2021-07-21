@@ -93,7 +93,7 @@ class Success extends \Magento\Checkout\Controller\Onepage\Success
         foreach ($products as $product) {
             foreach ($orderItems as $item) {
                 if ($product->getSku() == $item->getSku()) {
-                    $order_count = $product->getOrderCount() + 1;
+                    $order_count = $product->getOrderCount() + $item->getData('qty_ordered');
                     $product->setOrderCount($order_count);
                     $product->save();
                 }
