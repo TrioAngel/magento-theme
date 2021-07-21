@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Aheadworks_OneStepCheckout::css/style.css"/>
+    </head>
+    <body>
+        <referenceContainer name="js">
+            <block class="Magento\Backend\Block\Template" name="js.system_config_js" template="Aheadworks_OneStepCheckout::system/config/js.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Aheadworks\OneStepCheckout\ViewModel\System\Js</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
