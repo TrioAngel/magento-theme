@@ -37,12 +37,15 @@
         <!-- ko foreach: getRegion('amazon-button-region') -->
         <!-- ko template: getTemplate() --><!-- /ko -->
         <!--/ko-->
-        <!-- ko foreach: getRegion('shippingAddress') -->
-        <!-- ko template: getTemplate() --><!-- /ko -->
-        <!--/ko-->
-        <!-- ko foreach: getRegion('shippingMethod') -->
-        <!-- ko template: getTemplate() --><!-- /ko -->
-        <!--/ko-->
+        <li class="aw-onestep-groups_item shipping-group">
+
+            <!-- ko foreach: getRegion('shippingAddress') -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+            <!--/ko-->
+            <!-- ko foreach: getRegion('shippingMethod') -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+            <!--/ko-->
+        </li>
         <!-- ko foreach: getRegion('paymentMethod') -->
         <!-- ko template: getTemplate() --><!-- /ko -->
         <!--/ko-->

@@ -1,4 +1,5 @@
 <!-- ko if: isShown -->
+<p class="subgroup-title" data-bind="i18n: 'Payment address', visible: canUseShippingAddress()" ></p>
 <div class="onestep-billing-address">
     <div class="field choice" data-bind="visible: canUseShippingAddress()">
         <input id="billing-address-same-as-shipping"
@@ -19,11 +20,11 @@
     <!--/ko-->
     <!-- ko if: showToolbar -->
     <div class="action-toolbar">
-        <button class="action primary" data-bind="click: onUpdateAddressClick">
-            <span data-bind="i18n: 'Update'"></span>
-        </button>
         <button class="action" data-bind="click: onCancelClick">
             <span data-bind="i18n: 'Cancel'"></span>
+        </button>
+        <button class="action primary" data-bind="click: onUpdateAddressClick">
+            <span data-bind="i18n: 'Update'"></span>
         </button>
     </div>
     <!--/ko-->
@@ -43,11 +44,11 @@
     <!--/ko-->
     <!-- ko if: showToolbar -->
     <div class="action-toolbar">
-        <button class="action primary" data-bind="click: onUpdateAddressClick">
-            <span data-bind="i18n: 'Update'"></span>
-        </button>
         <button class="action" data-bind="click: onCancelClick">
             <span data-bind="i18n: 'Cancel'"></span>
+        </button>
+        <button class="action primary" data-bind="click: onUpdateAddressClick">
+            <span data-bind="i18n: 'Update'"></span>
         </button>
     </div>
     <!--/ko-->

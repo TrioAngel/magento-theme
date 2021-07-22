@@ -1,0 +1,9 @@
+<p class="subgroup-title" data-bind="i18n: 'Payment method'"></p>
+<div class="payment-method-list" data-bind="blockLoader: isLoading, afterRender: onRender" data-role="payment-methods-load">
+    <div repeat="foreach: paymentGroupsList, item: '$group'">
+        <each args="data: getRegion($group().displayArea), as: 'method'" render=""/>
+    </div>
+    <div class="no-quotes-block" data-bind="visible: !isPaymentMethodsAvailable()">
+        <!-- ko i18n: 'No Payment method available.'--><!-- /ko -->
+    </div>
+</div>
