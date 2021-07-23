@@ -61,6 +61,28 @@
         <?php endif ?>
     </div>
 </div>
+
+<?php if ($_pAddsses = $block->getAdditionalAddresses()): ?>
+<div class="block block-addresses-list">
+    <div class="block-title"><strong><?= $block->escapeHtml(__('Additional Address Entries')) ?></strong></div>
+    <div class="block-content">
+            <ol class="items addresses">
+                <?php foreach ($_pAddsses as $_address): ?>
+                    <li class="item">
+                        <address>
+                            <?= $block->getAddressHtml($_address) ?><br />
+                        </address>
+                        <div class="item actions">
+                            <a class="action edit" href="<?= $block->escapeUrl($block->getUrl('customer/address/edit', ['id' => $_address->getId()])) ?>"><span><?= $block->escapeHtml(__('Edit Address')) ?></span></a>
+                            <a class="action delete" href="#" role="delete-address" data-address="<?= $block->escapeHtmlAttr($_address->getId()) ?>"><span><?= $block->escapeHtml(__('Delete Address')) ?></span></a>
+                        </div>
+                    </li>
+                <?php endforeach; ?>
+            </ol>
+    </div>
+</div>
+<?php endif ?>
+
 <div class="actions-toolbar">
     <div class="primary">
         <button type="button" role="add-address" class="action primary add"><span><?= $block->escapeHtml(__('Add New Address')) ?></span></button>

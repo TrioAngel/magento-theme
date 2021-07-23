@@ -328,6 +328,48 @@
                         }
                     }
                 }
+                .block.block-addresses-list {
+                    .block-title {
+                        border: none;
+                        strong {
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: #000;
+                        }
+                    }
+                    .block-content {
+                        .items.addresses {
+                            .item {
+                                padding: 8px 20px 20px;
+                                margin: 0;
+                                width: 45%;
+                                address {
+                                    color: #696969;
+                                    font-size: 13px;
+                                    line-height: 25px;
+                                    a {
+                                        color: #696969;
+                                        text-decoration: none;
+                                    }
+                                }
+                                .item.actions {
+                                    margin-top: 10px;
+                                    padding: 0;
+                                    a {
+                                        color: #33C0CB;
+                                        text-decoration: none;
+                                        font-size: 12px;
+                                        line-height: 24px;
+                                        &.action.edit:after {
+                                            border-color: @color-product-btn;
+                                            margin: 0 10px 0 13px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
                 .block-addresses-default {
                     .block-content {
                         padding: 8px 20px 20px;
@@ -373,6 +415,20 @@
                     }
                     .field {
                         margin-bottom: 10px;
+                        &.choice.set.billing,
+                        &.choice.set.shipping {
+                            input {
+                                box-shadow: none;
+                                border-color: #DDDDDD;
+                            }
+                            .label {
+                                display: inline;
+                                padding-left: 10px;
+                                span {
+                                    color: #878787;
+                                }
+                            }
+                        }
                         &.choice {
                             margin: 24px 0;
                             label {
