@@ -474,31 +474,76 @@
                     .shipping-group {
                         .shipping-method {
                             margin-bottom: 50px;
-                            padding-left: 55px;
-                            .group-content {
-                                padding: 0;
-                                .onestep-shipping-method-list {
+                            &.edit-shipping {
+                                padding-left: 55px;
+                                .group-content {
                                     padding: 0;
-                                    .shipping-method-card.field.choice {
-                                        width: 90%;
-                                        font-size: 13px;
-                                        opacity: 1 !important;
-                                        color: #696969;
-                                        line-height: 25px;
-                                        .shipping-method-title {
-                                            input[type='radio']:checked + label:before {
-                                                color: @color-product-btn;
-                                            }
-                                            .label {
-                                                &:before {
-                                                    color: #C0C0C0;
-                                                    font-size: 13px;
-                                                    margin: 0 13px 0 !important;
+                                    .onestep-shipping-method-list {
+                                        padding: 0;
+                                        .shipping-method-card.field.choice {
+                                            width: 90%;
+                                            font-size: 13px;
+                                            opacity: 1 !important;
+                                            color: #696969;
+                                            line-height: 25px;
+                                            .shipping-method-title {
+                                                input[type='radio']:checked + label:before {
+                                                    color: @color-product-btn;
                                                 }
-                                                span {
-                                                    color: #696969;
-                                                    font-size: 13px;
-                                                    line-height: 25px;
+                                                .label {
+                                                    &:before {
+                                                        color: #C0C0C0;
+                                                        font-size: 13px;
+                                                        margin: 0 13px 0 !important;
+                                                    }
+                                                    span {
+                                                        color: #696969;
+                                                        font-size: 13px;
+                                                        line-height: 25px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &.not-edit-shipping {
+                                display: inline-block;
+                                width: 46%;
+                                vertical-align: top;
+                                .group-content {
+                                    padding: 0;
+                                    .onestep-shipping-method-list {
+                                        padding: 0;
+                                        .shipping-method-card.field.choice {
+                                            width: 90%;
+                                            font-size: 13px;
+                                            opacity: 1 !important;
+                                            color: #696969;
+                                            line-height: 25px;
+                                            .shipping-method-price {
+                                                display: none;
+                                            }
+                                            .shipping-method-title {
+                                                input, label {
+                                                    cursor: unset;
+                                                }
+                                                input[type='radio']:checked + label {
+                                                    display: block;
+                                                }
+                                                .shipping-method-subtitle {
+                                                    display: none;
+                                                }
+                                                .label {
+                                                    display: none;
+                                                    &:before {
+                                                        content: none;
+                                                    }
+                                                    span {
+                                                        color: #696969;
+                                                        font-size: 13px;
+                                                        line-height: 25px;
+                                                    }
                                                 }
                                             }
                                         }
@@ -507,41 +552,142 @@
                             }
                         }
                         .shipping-address {
-                            padding-left: 55px;
-                            .group-content {
-                                .onestep-shipping-address {
-                                    .field.addresses {
-                                        ol {
-                                            .shipping-address-item {
-                                                border: none;
-                                                font-size: 13px;
-                                                line-height: 30px;
-                                                color: #696969;
-                                                background-color: #ffffff;
-                                                padding: 0;
-                                                margin-bottom: 30px;
-                                                width: 45%;
-                                                padding: 5px 15px;
-                                                button {
-                                                    width: auto;
-                                                    height: auto;
-                                                    position: unset;
-                                                    display: unset;
-                                                    text-indent: 0;
-                                                    span {
+                            &.edit-shipping {
+                                .group-content {
+                                    .onestep-shipping-address {
+                                        .field.addresses {
+                                            ol {
+                                                .shipping-address-item {
+                                                    border: none;
+                                                    font-size: 13px;
+                                                    line-height: 30px;
+                                                    color: #696969;
+                                                    background-color: #ffffff;
+                                                    padding: 0;
+                                                    margin-bottom: 30px;
+                                                    width: 45%;
+                                                    padding: 5px 15px;
+                                                    button {
+                                                        width: auto;
+                                                        height: auto;
                                                         position: unset;
-                                                        color: @color-product-btn;
+                                                        display: unset;
+                                                        text-indent: 0;
+                                                        span {
+                                                            position: unset;
+                                                            color: @color-product-btn;
+                                                        }
+                                                    }
+                                                    &.not-selected-item {
+                                                        cursor: pointer;
+                                                        &:hover {
+                                                            transform: scale(1.05);
+
+                                                        }
+                                                    }
+                                                    &.selected-item {
+                                                        border: none;
+                                                        box-shadow: none;
+                                                        background-color: #ffffff;
+                                                        &:after {
+                                                            color: @color-product-btn;
+                                                            right: unset;
+                                                            bottom: 5%;
+                                                            left: 50%;
+                                                        }
                                                     }
                                                 }
-                                                &.not-selected-item:hover {
-                                                    transform: scale(1.05);
+                                            }
+                                        }
+                                        .new-shipping-address-form {
+                                            margin-bottom: 50px;
+                                            .title {
+                                                padding-left: 20px;
+                                                &:before {
+                                                    background-color: @color-product-btn;
                                                 }
-                                                &.selected-item {
-                                                    border: none;
-                                                    box-shadow: none;
-                                                    background-color: #ffffff;
-                                                    &:after {
-                                                        content: none;
+                                                > strong {
+                                                    font-size: 12px;
+                                                    color: @color-product-btn;
+                                                    line-height: 14px;
+                                                }
+                                            }
+                                            .content {
+                                                .form {
+                                                    .field.choice {
+                                                        display: block;
+                                                        input[type='checkbox']:checked + label:before {
+                                                            color: @color-product-btn;
+                                                        }
+                                                        .label {
+                                                            width: fit-content;
+                                                            &:before {
+                                                                color: #DADADA;
+                                                                font-size: 14px;
+                                                                margin: 3px 13px 0 0 !important;
+                                                            }
+                                                            span {
+                                                                font-size: 13px;
+                                                                line-height: 25px;
+                                                                color: #696969;
+                                                            }
+                                                        }
+                                                    }
+                                                    .osc-fluid {
+                                                        .field {
+                                                            &[name='shippingAddress.firstname'],
+                                                            &[name='shippingAddress.lastname'] {
+                                                                display: inline-block;
+                                                                width: 49%;
+                                                            }
+                                                            &[name='shippingAddress.lastname'] {
+                                                                float: right;
+                                                            }
+                                                            margin: 0;
+                                                            margin-inline: 0;
+                                                            .control {
+                                                                margin: 5px 0;
+                                                                label {
+                                                                    span {
+                                                                        &:after {
+                                                                            content: none;
+                                                                        }
+                                                                    }
+                                                                }
+                                                                input {
+                                                                    font-size: 13px;
+                                                                    line-height: 28px;
+                                                                    color: #252525;
+                                                                    &:focus {
+                                                                        border-color: @color-product-btn;
+                                                                        box-shadow: none;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                .action-toolbar {
+                                                    display: block;
+                                                    .action {
+                                                        border: 1px solid #000000;
+                                                        background-color: #ffffff;
+                                                        border-radius: 62px;
+                                                        padding: 10px 0;
+                                                        min-width: 170px;
+                                                        &.primary {
+                                                            border: none;
+                                                            background-color: @color-product-btn;
+                                                            span {
+                                                                color: #ffffff;
+                                                            }
+                                                        }
+                                                        span {
+                                                            color: #000;
+                                                            font-size: 13px;
+                                                            line-height: 15px;
+                                                            font-weight: normal;
+                                                        }
                                                     }
                                                 }
                                             }
@@ -549,104 +695,138 @@
                                     }
                                 }
                             }
-                        }
-                    }
-                    .aw-onestep-groups_item.payment-methods {
-                        .group-content {
-                            padding-left: 55px;
-                            .for-payment {
-                                margin-bottom: 40px;
-                                .payment-method-list {
-                                    .payment-method {
-                                        &._active {
-                                            &:before {
-                                                content: none;
-                                            }
-                                        }
-                                        border: none;
-                                        .payment-method-content {
-                                            padding: 0;
-                                        }
-                                        .payment-method-title.field.choice {
-                                            background-color: #ffffff;
-                                            padding: 5px 0;
-                                            input[type='radio']:checked + label:before {
-                                                color: @color-product-btn;
-                                            }
-                                            .label {
-                                                &:before {
-                                                    color: #C0C0C0;
+                            &.not-edit-shipping {
+                                display: inline-block;
+                                width: 46%;
+                                vertical-align: top;
+                                .group-content {
+                                    .onestep-shipping-address {
+                                        .field.addresses {
+                                            margin: 0;
+                                            ol {
+                                                .shipping-address-item {
+                                                    border: none;
                                                     font-size: 13px;
-                                                    margin: 0 13px 0 !important;
-                                                }
-                                                span {
+                                                    line-height: 30px;
                                                     color: #696969;
-                                                    font-size: 13px;
-                                                    line-height: 25px;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                                .onestep-billing-address {
-                                    .field.choice {
-                                        margin: 25px 2px;
-
-                                        .label {
-                                            &:before {
-                                                color: @color-product-btn;
-                                                font-size: 14px;
-                                                margin: 3px 13px 0 0 !important;
-                                            }
-                                            span {
-                                                font-size: 13px;
-                                                line-height: 25px;
-                                                color: #696969;
-                                            }
-                                        }
-                                    }
-                                    .field.field-select-billing {
-                                        width: 100%;
-                                        .select {
-                                            line-height: 28px;
-                                            height: 40px;
-                                            padding: 6px 17px;
-                                            color: #252525;
-                                            font-size: 13px;
-                                            box-shadow: none;
-                                            border-color: #DDDDDD;
-                                        }
-                                    }
-                                    .form {
-                                        .osc-fluid {
-
-                                            .field {
-                                                &[name='billingAddress.firstname'],
-                                                &[name='billingAddress.lastname'] {
-                                                    display: inline-block;
-                                                    width: 49%;
-                                                }
-                                                &[name='billingAddress.lastname'] {
-                                                    float: right;
-                                                }
-                                                margin: 0;
-                                                margin-inline: 0;
-                                                .control {
-                                                    margin: 5px 0;
-                                                    label {
+                                                    background-color: #ffffff;
+                                                    margin-bottom: 30px;
+                                                    width: 100%;
+                                                    padding: 0;
+                                                    button {
+                                                        width: auto;
+                                                        height: auto;
+                                                        position: unset;
+                                                        display: unset;
+                                                        text-indent: 0;
                                                         span {
-                                                            &:after {
-                                                                content: none;
+                                                            position: unset;
+                                                            color: @color-product-btn;
+                                                        }
+                                                    }
+                                                    &.not-selected-item {
+                                                        display: none;
+                                                    }
+                                                    &.selected-item {
+                                                        border: none;
+                                                        box-shadow: none;
+                                                        background-color: #ffffff;
+                                                        &:after {
+                                                            content: none;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .new-shipping-address-form {
+                                            margin-bottom: 50px;
+                                            .title {
+                                                padding: 0;
+                                                &:before {
+                                                    background-color: @color-product-btn;
+                                                }
+                                                > strong {
+                                                    font-size: 12px;
+                                                    color: @color-product-btn;
+                                                    line-height: 14px;
+                                                }
+                                            }
+                                            .content {
+                                                width: 200%;
+                                                .form {
+                                                    .field.choice {
+                                                        display: block;
+                                                        input[type='checkbox']:checked + label:before {
+                                                            color: @color-product-btn;
+                                                        }
+                                                        .label {
+                                                            width: fit-content;
+                                                            &:before {
+                                                                color: #DADADA;
+                                                                font-size: 14px;
+                                                                margin: 3px 13px 0 0 !important;
+                                                            }
+                                                            span {
+                                                                font-size: 13px;
+                                                                line-height: 25px;
+                                                                color: #696969;
                                                             }
                                                         }
                                                     }
-                                                    input {
-                                                        font-size: 13px;
-                                                        line-height: 28px;
-                                                        color: #252525;
-                                                        &:focus {
-                                                            border-color: @color-product-btn;
-                                                            box-shadow: none;
+                                                    .osc-fluid {
+                                                        .field {
+                                                            &[name='shippingAddress.firstname'],
+                                                            &[name='shippingAddress.lastname'] {
+                                                                display: inline-block;
+                                                                width: 49%;
+                                                            }
+                                                            &[name='shippingAddress.lastname'] {
+                                                                float: right;
+                                                            }
+                                                            margin: 0;
+                                                            margin-inline: 0;
+                                                            .control {
+                                                                margin: 5px 0;
+                                                                label {
+                                                                    span {
+                                                                        &:after {
+                                                                            content: none;
+                                                                        }
+                                                                    }
+                                                                }
+                                                                input {
+                                                                    font-size: 13px;
+                                                                    line-height: 28px;
+                                                                    color: #252525;
+                                                                    &:focus {
+                                                                        border-color: @color-product-btn;
+                                                                        box-shadow: none;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                .action-toolbar {
+                                                    display: block;
+                                                    .action {
+                                                        border: 1px solid #000000;
+                                                        background-color: #ffffff;
+                                                        border-radius: 62px;
+                                                        padding: 10px 0;
+                                                        min-width: 170px;
+                                                        &.primary {
+                                                            border: none;
+                                                            background-color: @color-product-btn;
+                                                            span {
+                                                                color: #ffffff;
+                                                            }
+                                                        }
+                                                        span {
+                                                            color: #000;
+                                                            font-size: 13px;
+                                                            line-height: 15px;
+                                                            font-weight: normal;
                                                         }
                                                     }
                                                 }
@@ -654,28 +834,260 @@
                                         }
                                     }
                                 }
-                                .action-toolbar {
-                                    justify-content: flex-end;
-                                    padding-left: 50px;
-                                    margin-top: 50px;
-                                    .action {
-                                        border: 1px solid #000000;
-                                        background-color: #ffffff;
-                                        border-radius: 62px;
-                                        padding: 10px 0;
-                                        min-width: 170px;
-                                        &.primary {
+                            }
+                            padding-left: 55px;
+                        }
+                    }
+                    .aw-onestep-groups_item.payment-methods {
+                        margin-top: 30px;
+                        .group-content {
+                            padding-left: 55px;
+                            &.not-edit-payment {
+                                .for-payment {
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    width: 48%;
+                                    .payment-method-list {
+                                        .payment-method {
+                                            display: none;
                                             border: none;
-                                            background-color: @color-product-btn;
-                                            span {
-                                                color: #ffffff;
+                                            &._active {
+                                                display: block;
+
+                                                &:before {
+                                                    content: none;
+                                                }
+                                            }
+                                            .payment-method-content {
+                                                padding: 0;
+                                            }
+                                            .payment-method-title.field.choice {
+                                                background-color: #ffffff;
+                                                padding: 5px 0;
+                                                input {
+                                                    cursor: unset;
+                                                }
+                                                .label {
+                                                    cursor: unset;
+                                                    &:before {
+                                                        content: none;
+                                                    }
+                                                    span {
+                                                        color: #696969;
+                                                        font-size: 13px;
+                                                        line-height: 25px;
+                                                    }
+                                                }
                                             }
                                         }
-                                        span {
-                                            color: #000;
+                                    }
+                                    .onestep-billing-address {
+                                        .field.choice {
+                                            display: none;
+                                        }
+                                        .field.field-select-billing {
+                                            display: none;
+                                        }
+                                        .billing-address-details {
+                                            padding: 0;
                                             font-size: 13px;
-                                            line-height: 15px;
-                                            font-weight: normal;
+                                            line-height: 30px;
+                                            color: #696969;
+                                        }
+                                        .form {
+                                            .osc-fluid {
+
+                                                .field {
+                                                    &[name='billingAddress.firstname'],
+                                                    &[name='billingAddress.lastname'] {
+                                                        display: inline-block;
+                                                        width: 49%;
+                                                    }
+                                                    &[name='billingAddress.lastname'] {
+                                                        float: right;
+                                                    }
+                                                    margin: 0;
+                                                    margin-inline: 0;
+                                                    .control {
+                                                        margin: 5px 0;
+                                                        label {
+                                                            span {
+                                                                &:after {
+                                                                    content: none;
+                                                                }
+                                                            }
+                                                        }
+                                                        input {
+                                                            font-size: 13px;
+                                                            line-height: 28px;
+                                                            color: #252525;
+                                                            &:focus {
+                                                                border-color: @color-product-btn;
+                                                                box-shadow: none;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .action-toolbar {
+                                        justify-content: flex-end;
+                                        padding-left: 50px;
+                                        margin-top: 50px;
+                                        .action {
+                                            border: 1px solid #000000;
+                                            background-color: #ffffff;
+                                            border-radius: 62px;
+                                            padding: 10px 0;
+                                            min-width: 170px;
+                                            &.primary {
+                                                border: none;
+                                                background-color: @color-product-btn;
+                                                span {
+                                                    color: #ffffff;
+                                                }
+                                            }
+                                            span {
+                                                color: #000;
+                                                font-size: 13px;
+                                                line-height: 15px;
+                                                font-weight: normal;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &.edit-payment {
+                                .for-payment {
+                                    margin-bottom: 40px;
+                                    .payment-method-list {
+                                        .payment-method {
+                                            &._active {
+                                                &:before {
+                                                    content: none;
+                                                }
+                                            }
+                                            border: none;
+                                            .payment-method-content {
+                                                padding: 0;
+                                            }
+                                            .payment-method-title.field.choice {
+                                                background-color: #ffffff;
+                                                padding: 5px 0;
+                                                input[type='radio']:checked + label:before {
+                                                    color: @color-product-btn;
+                                                }
+                                                .label {
+                                                    &:before {
+                                                        color: #C0C0C0;
+                                                        font-size: 13px;
+                                                        margin: 0 13px 0 !important;
+                                                    }
+                                                    span {
+                                                        color: #696969;
+                                                        font-size: 13px;
+                                                        line-height: 25px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .onestep-billing-address {
+                                        .field.choice {
+                                            margin: 25px 2px;
+
+                                            .label {
+                                                &:before {
+                                                    color: @color-product-btn;
+                                                    font-size: 14px;
+                                                    margin: 3px 13px 0 0 !important;
+                                                }
+                                                span {
+                                                    font-size: 13px;
+                                                    line-height: 25px;
+                                                    color: #696969;
+                                                }
+                                            }
+                                        }
+                                        .billing-address-details {
+                                            padding: 0;
+                                            font-size: 13px;
+                                            line-height: 30px;
+                                            color: #696969;
+                                        }
+                                        .field.field-select-billing {
+                                            width: 100%;
+                                            .select {
+                                                line-height: 28px;
+                                                height: 40px;
+                                                padding: 6px 17px;
+                                                color: #252525;
+                                                font-size: 13px;
+                                                box-shadow: none;
+                                                border-color: #DDDDDD;
+                                            }
+                                        }
+                                        .form {
+                                            .osc-fluid {
+
+                                                .field {
+                                                    &[name='billingAddress.firstname'],
+                                                    &[name='billingAddress.lastname'] {
+                                                        display: inline-block;
+                                                        width: 49%;
+                                                    }
+                                                    &[name='billingAddress.lastname'] {
+                                                        float: right;
+                                                    }
+                                                    margin: 0;
+                                                    margin-inline: 0;
+                                                    .control {
+                                                        margin: 5px 0;
+                                                        label {
+                                                            span {
+                                                                &:after {
+                                                                    content: none;
+                                                                }
+                                                            }
+                                                        }
+                                                        input {
+                                                            font-size: 13px;
+                                                            line-height: 28px;
+                                                            color: #252525;
+                                                            &:focus {
+                                                                border-color: @color-product-btn;
+                                                                box-shadow: none;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .action-toolbar {
+                                        justify-content: flex-end;
+                                        padding-left: 50px;
+                                        margin-top: 50px;
+                                        .action {
+                                            border: 1px solid #000000;
+                                            background-color: #ffffff;
+                                            border-radius: 62px;
+                                            padding: 10px 0;
+                                            min-width: 170px;
+                                            &.primary {
+                                                border: none;
+                                                background-color: @color-product-btn;
+                                                span {
+                                                    color: #ffffff;
+                                                }
+                                            }
+                                            span {
+                                                color: #000;
+                                                font-size: 13px;
+                                                line-height: 15px;
+                                                font-weight: normal;
+                                            }
                                         }
                                     }
                                 }
