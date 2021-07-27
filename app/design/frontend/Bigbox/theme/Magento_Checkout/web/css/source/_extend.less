@@ -470,6 +470,37 @@
                     color: #000;
                     margin-bottom: 20px;
                 }
+                .edit-form-btn {
+                    color: @color-product-btn !important;
+                    font-size: 12px !important;
+                    line-height: 14px !important;
+                    text-transform: capitalize;
+                    cursor: pointer;
+                }
+                .action-toolbar.edit-form-btns {
+                    display: block;
+                    .action {
+                        border: 1px solid #000000;
+                        background-color: #ffffff;
+                        border-radius: 62px;
+                        padding: 10px 0;
+                        min-width: 170px;
+                        &.primary {
+                            border: none;
+                            background-color: @color-product-btn;
+                            span {
+                                color: #ffffff;
+                            }
+                        }
+                        span {
+                            color: #000;
+                            font-size: 13px;
+                            line-height: 15px;
+                            font-weight: normal;
+                        }
+                    }
+                }
+
                 .aw-onestep-groups {
                     .shipping-group {
                         .shipping-method {

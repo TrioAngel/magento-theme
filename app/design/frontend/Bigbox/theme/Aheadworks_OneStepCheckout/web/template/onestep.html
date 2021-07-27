@@ -45,6 +45,14 @@
             <!-- ko foreach: getRegion('shippingMethod') -->
             <!-- ko template: getTemplate() --><!-- /ko -->
             <!--/ko-->
+                <div class="action-toolbar edit-form-btns" id="edit-form-shipping-btn" style="display: none">
+                    <button class="action primary" >
+                        <span data-bind="i18n: 'save '"></span>
+                    </button>
+                    <button class="action">
+                        <span data-bind="i18n: 'cancel '"></span>
+                    </button>
+                </div>
         </li>
         <!-- ko foreach: getRegion('paymentMethod') -->
         <!-- ko template: getTemplate() --><!-- /ko -->
