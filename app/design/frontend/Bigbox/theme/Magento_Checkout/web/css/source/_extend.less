@@ -443,7 +443,8 @@
                 }
             }
             .aw-onestep.aw-onestep-main {
-                .group-title {
+                .group-title,
+                .not-logged-title {
                     span {
                         color: #000;
                         font-size: 14px;
@@ -461,6 +462,52 @@
                         height: 32px !important;
                         &:after {
                             font-weight: bold;
+                        }
+                    }
+                }
+                .authentication {
+                    padding-left: 55px;
+                    span {
+                        font-size: 13px;
+                        line-height: 15px;
+                        color: #000;
+                    }
+                    a {
+                        span {
+                            color: @color-product-btn;
+                        }
+                    }
+                }
+                .email {
+                    padding-left: 55px;
+                    .form.form-login {
+                        .field.field-email {
+                            .label {
+                                span {
+                                    &:after {
+                                        content: none;
+                                    }
+                                }
+                            }
+                            .control {
+                                margin: 5px 0;
+                                input {
+                                    font-size: 13px;
+                                    line-height: 28px;
+                                    color: #252525;
+                                    &:focus {
+                                        border-color: @color-product-btn;
+                                        box-shadow: none;
+                                    }
+                                }
+                            }
+                            .note {
+                                span {
+                                    font-size: 12px;
+                                    line-height: 14px;
+                                    color: #252525;
+                                }
+                            }
                         }
                     }
                 }
@@ -500,7 +547,6 @@
                         }
                     }
                 }
-
                 .aw-onestep-groups {
                     .shipping-group {
                         .shipping-method {
@@ -586,6 +632,61 @@
                             &.edit-shipping {
                                 .group-content {
                                     .onestep-shipping-address {
+                                        margin-bottom: 25px;
+                                        .form {
+                                            .field.choice {
+                                                display: block;
+                                                input[type='checkbox']:checked + label:before {
+                                                    color: @color-product-btn;
+                                                }
+                                                .label {
+                                                    width: fit-content;
+                                                    &:before {
+                                                        color: #DADADA;
+                                                        font-size: 14px;
+                                                        margin: 3px 13px 0 0 !important;
+                                                    }
+                                                    span {
+                                                        font-size: 13px;
+                                                        line-height: 25px;
+                                                        color: #696969;
+                                                    }
+                                                }
+                                            }
+                                            .osc-fluid {
+                                                .field {
+                                                    &[name='shippingAddress.firstname'],
+                                                    &[name='shippingAddress.lastname'] {
+                                                        display: inline-block;
+                                                        width: 49%;
+                                                    }
+                                                    &[name='shippingAddress.lastname'] {
+                                                        float: right;
+                                                    }
+                                                    margin: 0;
+                                                    margin-inline: 0;
+                                                    .control {
+                                                        margin: 5px 0;
+                                                        label {
+                                                            span {
+                                                                &:after {
+                                                                    content: none;
+                                                                }
+                                                            }
+                                                        }
+                                                        input {
+                                                            font-size: 13px;
+                                                            line-height: 28px;
+                                                            color: #252525;
+                                                            &:focus {
+                                                                border-color: @color-product-btn;
+                                                                box-shadow: none;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
                                         .field.addresses {
                                             ol {
                                                 .shipping-address-item {
@@ -594,7 +695,6 @@
                                                     line-height: 30px;
                                                     color: #696969;
                                                     background-color: #ffffff;
-                                                    padding: 0;
                                                     margin-bottom: 30px;
                                                     width: 45%;
                                                     padding: 5px 15px;

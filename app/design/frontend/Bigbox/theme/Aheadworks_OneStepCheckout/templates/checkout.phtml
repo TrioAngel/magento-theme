@@ -53,14 +53,6 @@
             $("#edit-form-payment-btn").css('display', 'none');
         });
 
-        $(document).bind('click', function () {
-            if($(".payment-method input:radio[name='payment[method]']")) {
-                if(!$(".payment-method").hasClass('_active')){
-                    $(".payment-method:first").addClass('_active');
-                    $(".payment-method input:radio[name='payment[method]']:first").attr('checked', true)
-                }
-            }
-        });
 
         $(document).on('click', '#edit-form-shipping', function () {
             $(".shipping-address").addClass('edit-shipping');
