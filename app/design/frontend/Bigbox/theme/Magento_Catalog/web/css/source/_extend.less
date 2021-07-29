@@ -4,25 +4,25 @@
 
 & when (@media-common = true) {
     .catalog-category-view {
-        .columns {
-            .column.main {
-                float: left;
-                .products.wrapper.grid.products-grid {
-                    margin: 0;
-                    .products.list.items.product-items {
-                        .item.product.product-item {
-                            &:nth-child(3n + 1) {
-                                margin-left: 0;
-                            }
-                            &:nth-child(4n + 1) {
+        .page-main {
+            padding-left: 0;
+            padding-right: 0;
+            .columns {
+                .column.main {
+                    float: left;
+                    .products.wrapper.grid.products-grid {
+                        margin: 0;
+                        .products.list.items.product-items {
+                            .item.product.product-item {
+                                &:nth-child(3n + 1) {
+                                    margin-left: 0;
+                                }
                                 margin-left: calc((100% - 3 * 32%) / 3);
-                            }
-                            margin-left: calc((100% - 3 * 32%) / 3);
-                            width: 32%;
-                            .product-item-info {
-                                width: 100% !important;
-                                position: relative;
-                                .in-stock-icon {
+                                width: 32%;
+                                .product-item-info {
+                                    width: 100% !important;
+                                    position: relative;
+                                    .in-stock-icon {
                                         display: inline-block;
                                         position: absolute;
                                         top: 8px;
@@ -64,144 +64,145 @@
                                             font-size: 45px;
                                         }
                                     }
-                                .out-of-stock-icon {
-                                    display: inline-block;
-                                    position: absolute;
-                                    top: 8px;
-                                    z-index: 100;
-                                    left: 3%;
-                                    transition: ease-out 0.3s;
-                                    .path1:before {
-                                        content: "\e90d";
-                                        font-family: 'icomoon' !important;
-                                        color: #2c3e50;
-                                        font-size: 45px;
-                                    }
-                                    .path2:before {
-                                        content: "\e90e";
-                                        font-family: 'icomoon' !important;
-                                        color: #415e72;
-                                        margin-left: -1em;
-                                        font-size: 45px;
-                                    }
-                                    .path3:before {
-                                        content: "\e90f";
-                                        font-family: 'icomoon' !important;
-                                        color: #517a91;
-                                        margin-left: -1em;
-                                        font-size: 45px;
-                                    }
-                                    .path4:before {
-                                        content: "\e910";
-                                        color: #ff4d41;
-                                        font-family: 'icomoon' !important;
-                                        margin-left: -1em;
-                                        font-size: 45px;
-                                    }
-                                    .path5:before {
-                                        content: "\e911";
-                                        color: #fff;
-                                        font-family: 'icomoon' !important;
-                                        margin-left: -1em;
-                                        font-size: 45px;
-                                    }
-                                }
-                                .product-dicount-image {
-                                    display: inline-block;
-                                    position: absolute;
-                                    top: 1px;
-                                    z-index: 100;
-                                    right: 4%;
-                                    transition: ease-out 0.3s;
-                                    color: #FFFFFF;
-                                    background: url("@{baseDir}images/vector.png") no-repeat;
-                                    background-size: contain;
-                                    width: 25px;
-                                    height: 50px;
-                                    span {
-                                        font-size: 10px;
-                                        transform: rotate(90deg);
+                                    .out-of-stock-icon {
+                                        display: inline-block;
                                         position: absolute;
-                                        top: 12px;
-                                        left: -2px;
-                                    }
-                                }
-                                &:hover {
-                                    box-shadow: none;
-                                    border: none;
-                                    margin: 0;
-                                    padding: 0;
-                                    .in-stock-icon,
-                                    .out-of-stock-icon,
-                                    .product-dicount-image {
-                                        display: none;
-                                    }
-
-                                    img {
-                                        transform: scale(1.1);
-                                    }
-                                }
-                                .product-image-container {
-                                    width: 100% !important;
-                                    .product-image-wrapper {
-                                        padding-bottom: 100% !important;
-                                        img {
-                                            object-fit: cover;
-                                            width: 100% !important;
-                                            transition: ease-out 0.3s;
+                                        top: 8px;
+                                        z-index: 100;
+                                        left: 3%;
+                                        transition: ease-out 0.3s;
+                                        .path1:before {
+                                            content: "\e90d";
+                                            font-family: 'icomoon' !important;
+                                            color: #2c3e50;
+                                            font-size: 45px;
+                                        }
+                                        .path2:before {
+                                            content: "\e90e";
+                                            font-family: 'icomoon' !important;
+                                            color: #415e72;
+                                            margin-left: -1em;
+                                            font-size: 45px;
+                                        }
+                                        .path3:before {
+                                            content: "\e90f";
+                                            font-family: 'icomoon' !important;
+                                            color: #517a91;
+                                            margin-left: -1em;
+                                            font-size: 45px;
+                                        }
+                                        .path4:before {
+                                            content: "\e910";
+                                            color: #ff4d41;
+                                            font-family: 'icomoon' !important;
+                                            margin-left: -1em;
+                                            font-size: 45px;
+                                        }
+                                        .path5:before {
+                                            content: "\e911";
+                                            color: #fff;
+                                            font-family: 'icomoon' !important;
+                                            margin-left: -1em;
+                                            font-size: 45px;
                                         }
                                     }
-                                }
-                            }
-                            .product-item-details {
-                                text-align: center;
-                                .product-item-name {
-                                    strong {
-                                        font-size: 13px;
+                                    .product-dicount-image {
+                                        display: inline-block;
+                                        position: absolute;
+                                        top: 1px;
+                                        z-index: 100;
+                                        right: 4%;
+                                        transition: ease-out 0.3s;
+                                        color: #FFFFFF;
+                                        background: url("@{baseDir}images/vector.png") no-repeat;
+                                        background-size: contain;
+                                        width: 25px;
+                                        height: 50px;
+                                        span {
+                                            font-size: 10px;
+                                            transform: rotate(90deg);
+                                            position: absolute;
+                                            top: 12px;
+                                            left: -2px;
+                                        }
+                                    }
+                                    &:hover {
+                                        box-shadow: none;
+                                        border: none;
                                         margin: 0;
-                                        line-height: 15px;
-                                    }
-                                }
-                                .price-box.price-final_price {
-                                    margin: 9px 0;
-                                    .special-price {
-                                        color: @color-red;
-                                    }
-                                    .old-price {
-                                        .price-label {
+                                        padding: 0;
+                                        .in-stock-icon,
+                                        .out-of-stock-icon,
+                                        .product-dicount-image {
                                             display: none;
                                         }
-                                        .price {
-                                            color: #8A8A8A;
-                                            text-decoration: line-through;
-                                            font-size: 12px;
+
+                                        img {
+                                            transform: scale(1.1);
                                         }
                                     }
-                                    span {
-                                        font-weight: bold;
-                                        font-size: 13px;
-                                        line-height: 15px;
+                                    .product-image-container {
+                                        width: 100% !important;
+                                        .product-image-wrapper {
+                                            padding-bottom: 100% !important;
+                                            img {
+                                                object-fit: cover;
+                                                width: 100% !important;
+                                                transition: ease-out 0.3s;
+                                            }
+                                        }
                                     }
                                 }
-                                .product-reviews-summary {
-                                    .reviews-actions {
-                                        display: none;
+                                .product-item-details {
+                                    text-align: center;
+                                    .product-item-name {
+                                        strong {
+                                            font-size: 13px;
+                                            margin: 0;
+                                            line-height: 15px;
+                                        }
                                     }
-                                    .rating-summary {
-                                        margin: 0;
-                                        .rating-result {
-                                            width: 60px;
-                                            &::before {
-                                                font-size: 10px;
-                                                height: 10px;
-                                                line-height: 10px;
+                                    .price-box.price-final_price {
+                                        margin: 9px 0;
+                                        .special-price {
+                                            color: @color-red;
+                                        }
+                                        .old-price {
+                                            .price-label {
+                                                display: none;
                                             }
-                                            & > span {
+                                            .price {
+                                                color: #8A8A8A;
+                                                text-decoration: line-through;
+                                                font-size: 12px;
+                                            }
+                                        }
+                                        span {
+                                            font-weight: bold;
+                                            font-size: 13px;
+                                            line-height: 15px;
+                                        }
+                                    }
+                                    .product-reviews-summary {
+                                        .reviews-actions {
+                                            display: none;
+                                        }
+                                        .rating-summary {
+                                            margin: 0;
+                                            .rating-result {
+                                                width: 60px;
                                                 &::before {
-                                                    color: @color-stars;
                                                     font-size: 10px;
                                                     height: 10px;
                                                     line-height: 10px;
+                                                }
+                                                & > span {
+                                                    &::before {
+                                                        color: @color-stars;
+                                                        font-size: 10px;
+                                                        height: 10px;
+                                                        line-height: 10px;
+                                                    }
                                                 }
                                             }
                                         }
@@ -210,80 +211,80 @@
                             }
                         }
                     }
-                }
-                .toolbar.toolbar-products {
-                    margin-top: 80px;
-                    .pages {
-                        float: none;
-                        .item {
-                            &.pages-item-next,
-                            &.pages-item-previous {
-                                a {
-                                    border: none;
-                                    margin: 0;
-                                    &:before {
-                                        font-size: 12px;
-                                        line-height: 16px;
-                                        font-weight: normal;
-                                        color: #000;
-                                        vertical-align: text-top;
+                    .toolbar.toolbar-products {
+                        margin-top: 80px;
+                        .pages {
+                            float: none;
+                            .item {
+                                &.pages-item-next,
+                                &.pages-item-previous {
+                                    a {
+                                        border: none;
+                                        margin: 0;
+                                        &:before {
+                                            font-size: 12px;
+                                            line-height: 16px;
+                                            font-weight: normal;
+                                            color: #000;
+                                            vertical-align: text-top;
+                                        }
                                     }
                                 }
-                            }
-                            &.current {
-                                strong {
-                                    background-color: @color-product-btn;
+                                &.current {
+                                    strong {
+                                        background-color: @color-product-btn;
+                                        border-radius: 100%;
+                                        padding: 7px 17px;
+                                        span {
+                                            font-size: 14px;
+                                            line-height: 16px;
+                                            font-weight: normal;
+                                            color: #ffffff;
+                                        }
+                                    }
+                                }
+                                strong, a {
+                                    background-color: #EEEEEE;
                                     border-radius: 100%;
                                     padding: 7px 17px;
                                     span {
                                         font-size: 14px;
                                         line-height: 16px;
                                         font-weight: normal;
-                                        color: #ffffff;
+                                        color: #000;
                                     }
-                                }
-                            }
-                            strong, a {
-                                background-color: #EEEEEE;
-                                border-radius: 100%;
-                                padding: 7px 17px;
-                                span {
-                                    font-size: 14px;
-                                    line-height: 16px;
-                                    font-weight: normal;
-                                    color: #000;
                                 }
                             }
                         }
                     }
                 }
-            }
-            .sidebar.sidebar-main {
-                float: right;
-                padding: 0 0 0 2%;
-                .block-content.filter-content {
-                    .block-subtitle.filter-subtitle {
-                        display: none;
-                    }
-                    .filter-options {
-                        .filter-options-item {
-                            border: none;
-                            .filter-options-title {
-                                font-weight: bold;
-                                font-size: 14px;
-                                line-height: 16px;
-                                color: @color-gray-strong;
-                            }
-                            .filter-options-content {
-                                .items {
-                                    .item {
-                                        span {
-                                            font-size: 13px;
-                                            line-height: 15px;
-                                            color: @color-gray-strong;
-                                            &.count {
-                                                float: right;
-                                                color: #9F9F9F;
+                .sidebar.sidebar-main {
+                    float: right;
+                    padding: 0 0 0 2%;
+                    .block-content.filter-content {
+                        .block-subtitle.filter-subtitle {
+                            display: none;
+                        }
+                        .filter-options {
+                            .filter-options-item {
+                                border: none;
+                                .filter-options-title {
+                                    font-weight: bold;
+                                    font-size: 14px;
+                                    line-height: 16px;
+                                    color: @color-gray-strong;
+                                }
+                                .filter-options-content {
+                                    .items {
+                                        .item {
+                                            span {
+                                                font-size: 13px;
+                                                line-height: 15px;
+                                                color: @color-gray-strong;
+                                                &.count {
+                                                    float: right;
+                                                    color: #9F9F9F;
+                                                }
                                             }
                                         }
                                     }
