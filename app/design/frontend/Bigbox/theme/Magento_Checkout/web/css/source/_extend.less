@@ -654,6 +654,16 @@
                                                 }
                                             }
                                             .osc-fluid {
+                                                fieldset {
+                                                    margin: 0;
+                                                    .control {
+                                                        .field {
+                                                            .control {
+                                                                margin: 0;
+                                                            }
+                                                        }
+                                                    }
+                                                }
                                                 .field {
                                                     &[name='shippingAddress.firstname'],
                                                     &[name='shippingAddress.lastname'] {
@@ -765,6 +775,16 @@
                                                         }
                                                     }
                                                     .osc-fluid {
+                                                        fieldset {
+                                                            margin: 0;
+                                                            .control {
+                                                                .field {
+                                                                    .control {
+                                                                        margin: 0;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
                                                         .field {
                                                             &[name='shippingAddress.firstname'],
                                                             &[name='shippingAddress.lastname'] {
@@ -831,6 +851,71 @@
                                 width: 46%;
                                 vertical-align: top;
                                 .group-content {
+                                    .form {
+                                        width: 95%;
+                                        .field.choice {
+                                            display: block;
+                                            input[type='checkbox']:checked + label:before {
+                                                color: @color-product-btn;
+                                            }
+                                            .label {
+                                                width: fit-content;
+                                                &:before {
+                                                    color: #DADADA;
+                                                    font-size: 14px;
+                                                    margin: 3px 13px 0 0 !important;
+                                                }
+                                                span {
+                                                    font-size: 13px;
+                                                    line-height: 25px;
+                                                    color: #696969;
+                                                }
+                                            }
+                                        }
+                                        .osc-fluid {
+                                            fieldset {
+                                                margin: 0;
+                                                .control {
+                                                    .field {
+                                                        .control {
+                                                            margin: 0;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .field {
+                                                &[name='shippingAddress.firstname'],
+                                                &[name='shippingAddress.lastname'] {
+                                                    display: inline-block;
+                                                    width: 49%;
+                                                }
+                                                &[name='shippingAddress.lastname'] {
+                                                    float: right;
+                                                }
+                                                margin: 0;
+                                                margin-inline: 0;
+                                                .control {
+                                                    margin: 5px 0;
+                                                    label {
+                                                        span {
+                                                            &:after {
+                                                                content: none;
+                                                            }
+                                                        }
+                                                    }
+                                                    input {
+                                                        font-size: 13px;
+                                                        line-height: 28px;
+                                                        color: #252525;
+                                                        &:focus {
+                                                            border-color: @color-product-btn;
+                                                            box-shadow: none;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                                     .onestep-shipping-address {
                                         .field.addresses {
                                             margin: 0;
@@ -905,6 +990,16 @@
                                                         }
                                                     }
                                                     .osc-fluid {
+                                                        fieldset {
+                                                            margin: 0;
+                                                            .control {
+                                                                .field {
+                                                                    .control {
+                                                                        margin: 0;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
                                                         .field {
                                                             &[name='shippingAddress.firstname'],
                                                             &[name='shippingAddress.lastname'] {
@@ -1027,7 +1122,16 @@
                                         }
                                         .form {
                                             .osc-fluid {
-
+                                                fieldset {
+                                                    margin: 0;
+                                                    .control {
+                                                        .field {
+                                                            .control {
+                                                                margin: 0;
+                                                            }
+                                                        }
+                                                    }
+                                                }
                                                 .field {
                                                     &[name='billingAddress.firstname'],
                                                     &[name='billingAddress.lastname'] {
@@ -1161,7 +1265,16 @@
                                         }
                                         .form {
                                             .osc-fluid {
-
+                                                fieldset {
+                                                    margin: 0;
+                                                    .control {
+                                                        .field {
+                                                            .control {
+                                                                margin: 0;
+                                                            }
+                                                        }
+                                                    }
+                                                }
                                                 .field {
                                                     &[name='billingAddress.firstname'],
                                                     &[name='billingAddress.lastname'] {
